@@ -1,7 +1,7 @@
 * React
   
-  * [原理](Node/React/原理.md)
-  
+  * [原理](Note/React/原理.md)
+
 * VUE
 
   * [VUE学习](Note/vue/hello.md)
