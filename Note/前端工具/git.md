@@ -1,4 +1,4 @@
-### 前言
+### 前言 {docsify-ignore-all}
 
 一些前端工具的使用汇总。
 
@@ -12,23 +12,23 @@
 - [reflog](#reflog)
 - [Reset](#reset)
 
-## init 创建
+## init
 
 创建新仓库
 
-```
+```shell
 git init
 ```
 
-## clone 克隆
-```
+## clone
+```shell
 git clone username@host:/path/to/repository
 
 ```
 
-## add 添加与提交代码
+## add
 
-```
+```shell
 // 第一次拉去代码
 git pull origin master
 
