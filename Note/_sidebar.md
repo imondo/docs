@@ -9,8 +9,8 @@
   * [数据库](Note/SQL/README.md)
 
 
-* 前端工具
+* 工具
 
-  * [文档创建工具](Note/前端工具/doc.md) 
+  * [文档创建工具](Note/工具/doc.md) 
 
-  * [Git](Note/前端工具/git.md) 
+  * [Git](Note/工具/git.md) 
