@@ -54,7 +54,7 @@ npm publish
 // 更新 pageJson 中的 version 版本
 npm version patch
 
-// npm publish
+npm publish
 
 ```
 
