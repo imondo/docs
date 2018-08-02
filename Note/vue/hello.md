@@ -1,10 +1,5 @@
 * VUE
 
-```
-console.log(555);
+# 生命周期
 
-.hello {
-  color: #666;
-}
-
-```
+![](images/vue.jpg)
