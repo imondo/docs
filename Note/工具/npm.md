@@ -6,7 +6,7 @@
 npm init 
 ```
 
-创建新的`pageJson.json`文件
+创建新的`package.json`文件
 ```
 {
   "name": npm,
@@ -51,7 +51,7 @@ npm publish
 当我们要修改直接的模块包，想要更新时，先执行
 
 ```
-// 更新 pageJson 中的 version 版本
+// 更新 package.json 中的 version 版本
 npm version patch
 
 npm publish
