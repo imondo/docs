@@ -17,6 +17,8 @@
 
   * [npm](Note/工具/npm.md)
 
+  * [gulp](Note/工具/gulp.md)
+
 * 前端
 
   * [JS一知半解](前端/JS.md)
