@@ -1,3 +1,3 @@
 * Vue
   
-  * [学习](Note/vue/hello.md)
+  * [生命周期图](Note/vue/hello.md)

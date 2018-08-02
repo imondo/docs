@@ -2,4 +2,4 @@
 
 # 生命周期
 
-![](images/vue.jpg)
+<img src="_img/vue.jpg">
