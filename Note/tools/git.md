@@ -1,17 +1,3 @@
-### 前言 {docsify-ignore-all}
-
-一些前端工具的使用汇总。
-
-### 基本使用
-
-- [init](#init)
-- [clone](#clone)
-- [add](#add)
-- [Rebase 合并](#rebase-%E5%90%88%E5%B9%B6)
-- [stash](#stash)
-- [reflog](#reflog)
-- [Reset](#reset)
-
 ## init
 
 创建新仓库
@@ -108,7 +94,7 @@ git reset --hard HEAD^
 
 但是 `reset` 的本质并不是删除了 commit，而是重新设置了 HEAD 和它指向的 branch。
 
-### 错误汇总
+## 错误汇总
 
 * `npm install` 出现 `Unexpected end of JSON input while parsing near`的错误
 

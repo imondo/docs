@@ -11,13 +11,13 @@
 
 * 工具
 
-  * [文档创建工具](Note/工具/doc.md) 
+  * [文档创建工具](Note/tools/doc.md)
 
-  * [Git](Note/工具/git.md) 
+  * [Git](Note/tools/git.md) 
 
-  * [npm](Note/工具/npm.md)
+  * [NPM](Note/tools/npm.md)
 
-  * [gulp](Note/工具/gulp.md)
+  * [Gulp](Note/tools/gulp.md)
 
 * 前端
 

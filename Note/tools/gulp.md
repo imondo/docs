@@ -1,10 +1,5 @@
 # gulp 前端自动化构建工具
 
-- [插件](#插件)
-- [运行](#运行)
-- [编译ES6](#编译ES6)
-- [版本号处理](#版本号处理)
-
 ## 插件
 * gulp-babel ES6转换成ES5兼容
 * gulp-load-plugins 自动加载`package.json`中的 `gulp`插件
