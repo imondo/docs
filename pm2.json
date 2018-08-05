@@ -1,6 +1,6 @@
 [{
   "name": "docs",
-  "script": "node deployed.js",
+  "script": "deployed.js",
   "env_dev": {
     "NODE_ENV": "development"
   },
