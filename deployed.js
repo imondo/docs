@@ -6,7 +6,6 @@ var handler = createHandler({
   secret: '123'
 })
 http.createServer(function (req, res) {
-  console.log(req.headers)
   handler(req, res, function (err) {
     res.statusCode = 404;
     res.end('no such location')
