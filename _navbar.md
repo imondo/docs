@@ -1,3 +1,3 @@
-* [Notes](/Note/)
+* [NOTE](/Note/)
 
-* [Lifes](/Life/)
+* [LIFE](/Life/)
