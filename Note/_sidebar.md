@@ -4,7 +4,7 @@
 
   * [VUE](Note/vue/README.md)
 
-  * [小程序](Note/小程序/README.md)
+  * [小程序](Note/mini-app/README.md)
 
   * [数据库](Note/SQL/README.md)
 
@@ -21,4 +21,4 @@
 
 * 前端
 
-  * [JS一知半解](前端/JS.md)
+  * [JS一知半解](fe/JS.md)

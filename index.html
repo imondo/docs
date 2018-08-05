@@ -14,18 +14,15 @@
   <link href="https://fonts.googleapis.com/css?family=Lobster"rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="#/Note/">NOTE</a>
-    <a href="#/Life/">LIFE</a>
-  </nav>
   <div id="app">loading...</div>
   <script>
     window.$docsify = {
       name: '仿如昨日',
       themeColor: '#17233d',
       homepage: '_coverpage.md',
-      repo: 'https://github.com/one-pupil',
+      repo: 'https://github.com/one-pupil', 
       loadNavbar: true,
+      loadNavbar: '_navbar.md',
       mergeNavbar: true,
       ga: 'UA-106147152-1',
       coverpage: true, // 封面
@@ -51,9 +48,13 @@
       },     
       alias: {
         '/_sidebar.md': '/Note/_sidebar.md',
-        '/': '/Note/README.md'
+        '/Note/tools/_sidebar.md': '/Note/_sidebar.md',
+        '/fe/_sidebar.md': '/Note/_sidebar.md',
+        '/': '/Note/README.md',
+        '/.*/_navbar.md': '/_navbar.md'
       },
       nameLink: '#/',
+      executeScript: true
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>

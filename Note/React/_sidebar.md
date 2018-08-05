@@ -1,3 +1,3 @@
 * React
   
-  * [原理](Note/React/原理.md)
+  * [原理](Note/React/study.md)
