@@ -1,0 +1,27 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "deployed.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "github-webhook-handler": "^0.6.0",
+    "http": "0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/one-pupil/docs.git"
+  },
+  "keywords": [
+    "docsify"
+  ],
+  "author": "Mondo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/one-pupil/docs/issues"
+  },
+  "homepage": "https://github.com/one-pupil/docs#readme"
+}
