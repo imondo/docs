@@ -22,3 +22,5 @@
 * 前端
 
   * [JS一知半解](fe/JS.md)
+
+  * [Github项目实现自动化部署](fe/deploy.md)
