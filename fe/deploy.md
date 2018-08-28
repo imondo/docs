@@ -96,6 +96,49 @@ server {
 
 首次部署到服务器时，仍然是需要我们手动执行命令`git pull`项目，当我们在服务器上`clone`下我们的项目后，在本地尝试修改下代码，然后再次提交，可看到后台的日志
 
+```
+```
+
+再次查看`Webhooks`
+
+
+表示已经自动触发了接口，项目自动化部署成功。
+
+
+## 管理应用
+
+在服务器上执行`node`命令后，当我们离开服务器后，实际上程序进程关闭了，所以我们利用[pm2](https://github.com/Unitech/pm2)来管理我们的`node`进程。
+
+在项目根目录下新建`pm2.json`
+
+```
+[{
+  "name": "test",
+  "script": "deployed.js",
+  "env_dev": {
+    "NODE_ENV": "development"
+  },
+  "env_production": {
+    "NODE_ENV": "production"
+  }
+}]
+```
+
+把所有的代码推送上服务器，进入服务器项目目录，执行
+
+```
+// 启动命令
+pm2 start pm2.json
+
+// 查看是否启动
+pm2 list
+
+// 查看日志
+pm2 logs
+```
+
+
+
 
 
 
