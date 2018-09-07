@@ -40,7 +40,7 @@ gulp.task('default', ['dev']);
 * 安装babel
 
 ```
-npm install babel-core gulp-babel babel-preset-es2015 --save-dev
+npm install babel-core@7.0.0 gulp-babel babel-preset-es2015 --save-dev
 ```
 
 * 配置
