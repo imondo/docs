@@ -2,4 +2,4 @@
 
 * 生活已然尽兴， 何必畏首畏尾
 
-![](_media/bg.jpg)
+![](_media/bg.jpeg)
