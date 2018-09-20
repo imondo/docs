@@ -8,6 +8,15 @@
 insert into table_name (ID, NAME) values(1, 'Mondo')
 ```
 
+> 插入已有表的字段
+
+可能碰到需要在已有表里面新增新的字段，所用的关键词是`alter table ... add ... int`;
+
+```
+// 在表里新增（年龄）字段，默认值为0
+alter table table_name add ages int default 0;
+```
+
 > 查询记录
 
 在数据库中查询一条记录所用到的关键词是 `select from`
