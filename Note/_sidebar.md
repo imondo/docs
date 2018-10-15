@@ -17,7 +17,9 @@
 
   * [NPM](Note/tools/npm.md)
 
-  * [Gulp](Note/tools/gulp.md)    
+  * [Gulp](Note/tools/gulp.md)
+
+  * [VSCode](Note/tools/editor.md)    
 
 * 前端
 
