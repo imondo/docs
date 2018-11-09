@@ -26,3 +26,5 @@
   * [JS一知半解](fe/JS.md)
 
   * [Github项目实现自动化部署](fe/deploy.md)
+
+  * [前端Excel导出](fe/exportExl.md)
