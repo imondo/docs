@@ -19,7 +19,9 @@
 
   * [Gulp](Note/tools/gulp.md)
 
-  * [VSCode](Note/tools/editor.md)    
+  * [VSCode](Note/tools/editor.md) 
+
+  * [Eslintrc](Note/tools/eslintrc.md)    
 
 * 前端
 
