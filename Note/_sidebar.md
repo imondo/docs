@@ -25,6 +25,8 @@
 
   * [Eslintrc](Note/tools/eslintrc.md)
 
+  * [命令集](Note/tools/command.md)
+
 * 前端
 
   * [JS一知半解](fe/JS.md)
