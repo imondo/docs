@@ -32,3 +32,25 @@ selectable: {
   }
 }
 ```
+
+## vue的dispatch
+
+* 同级的`actions`可以引入`dispatch`
+
+```
+GenerateRoutes({ dispatch, commit }, data) {
+  ...
+}
+```
+
+* `dispatch`最多就只接受两个参数，`type`和`payload`
+
+传递第三个，为`undefined`
+
+```
+dispatch('AddRoutesIndex', {
+  routes: accessedRouters,
+  index: schoolRouterIndex
+});
+```
+
