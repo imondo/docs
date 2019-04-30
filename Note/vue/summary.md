@@ -54,3 +54,8 @@ dispatch('AddRoutesIndex', {
 });
 ```
 
+## ElementUI中el-tabs组件中el-table的宽度问题
+
+在tabs使用table会出现滚动条遮住内容可以使用`v-if`控制`el-tab-pane`里的内容
+例如`v-if="activeName === 'second'"`
+
