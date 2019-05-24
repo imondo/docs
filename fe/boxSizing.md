@@ -1,0 +1,71 @@
+# box-sizing，你的宽高度计算对了吗？
+
+我们都知道`CSS`盒模型分为**IE盒模型**和**W3C标准盒模型**，它们的计算方式和一个`CSS`属性有关`box-sizing`。
+![](https://user-gold-cdn.xitu.io/2019/5/22/16adcf2f9ad800b3?w=536&h=289&f=gif&s=4492)
+
+### box-sizing属性值
+
+> content-box | border-box 默认值：content-box
+
+### content-box
+
+当我们对元素设置`content-box`
+
+```
+.demo1 {
+  box-sizing: content-box;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  margin: 10px;
+  border: 5px solid #333;
+}
+```
+
+在浏览器具体表现为
+![](https://user-gold-cdn.xitu.io/2019/5/22/16add08cd6f02570?w=278&h=309&f=png&s=4991)
+
+### border-box
+
+当我们设置成`border-box`
+
+```
+.demo2 {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  margin: 10px;
+  border: 5px solid #ccc;
+}
+```
+
+在浏览器具体表现为
+![](https://user-gold-cdn.xitu.io/2019/5/24/16ae8d90e73ac55d?w=252&h=256&f=png&s=4299)
+
+### 元素宽高计算
+
+当我们去掉元素的宽高度时
+
+![](https://user-gold-cdn.xitu.io/2019/5/24/16ae8e463cd6bd0d?w=584&h=663&f=gif&s=129101)
+
+去掉元素的内外边距时
+![](https://user-gold-cdn.xitu.io/2019/5/24/16ae8e77ae415c48?w=584&h=663&f=gif&s=214390)
+
+当我们去掉元素`padding`，`border`时可以看出元素的宽高度是在变化的，而去掉`margin`值时，元素的宽高没有变化。
+
+所以我们的元素的宽高度值计算只和`padding`，`border`，元素的`content`有关
+
+```
+width = padding + border + content
+height = padding + border + content
+```
+具体[demo](https://codepen.io/one-pupil/pen/VqZdOm)请查看
+
+### 总结
+
+* `content-box`在宽度和高度之外绘制元素的内边距和边框
+
+* `border-box`在宽度和高度之内绘制元素的内边距和边框
+
+* 元素的宽高和`margin`无关，与`padding`，`border`，元素的`content`有关
