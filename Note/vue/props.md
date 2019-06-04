@@ -75,7 +75,7 @@ export default {
 
 ### 祖孙组件
 
-有时候我们可能会碰到组件间的无限嵌套，这是我们使用`props`时无法向下无限极传递数据的，这是我们可以用到`provide/inject`；`provide`可以向其子孙组件传递数据，而不关子孙组件的层级有多深，使用`inject`都可以拿到数据。详细解释可以参考[文档](https://cn.vuejs.org/v2/api/#provide-inject)
+有时候我们可能会碰到组件间的无限嵌套，这时我们使用`props`时无法向下无限极传递数据的，我们可以用到`provide/inject`；`provide`可以向其子孙组件传递数据，而不关子孙组件的层级有多深，使用`inject`都可以拿到数据。详细解释可以参考[文档](https://cn.vuejs.org/v2/api/#provide-inject)
 
 示例：
 
@@ -378,7 +378,7 @@ export default {
 
 ### `$attrs`与`$listeners`
 
-`$attrs`可以通过 `v-bind="$attrs"` 将组件上的特新都（class 和 style 除外）传入内部组件；传入的值与`inheritAttrs`的设置有关，通常封装高级组件。
+`$attrs`可以通过 `v-bind="$attrs"` 将组件上的特性都（class 和 style 除外）传入内部组件；传入的值与`inheritAttrs`的设置有关，通常封装高级组件。
 
 当我们`inheritAttrs` 设置 `true`；组件渲染DOM时写在组件的特性会渲染上去；
 
