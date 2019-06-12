@@ -169,6 +169,78 @@ npm i babel-plugin-dynamic-import-node -D
 
 **注意**：使用插件`build`后没有`chunk files`文件。
 
+## `DllPlugin`分包
+
+通过`DllPlugin`插件分离出第三方包
+
+* 新建`webpack.dll.conf.js`
+
+```
+const path = require('path');
+const webpack = require('webpack');
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+
+module.exports = {
+  entry: {
+    vendor: [
+      'vue',
+      'vue-router',
+      'vuex',
+      'axios',
+      'element-ui',
+      'echarts'
+    ]
+  },
+  output: {
+    filename: '[name]_dll_[hash:6].js', // 产生的文件名
+    path: path.resolve(__dirname, '../static/dll'),
+    library: '[name]_dll_[hash:6]'
+  },
+  plugins: [
+    new CleanWebpackPlugin({ 
+      root: path.resolve(__dirname, '../static/dll'),
+      dry: false // 启用删除文件
+    }),
+    new webpack.DllPlugin({
+      name: '[name]_dll_[hash:6]',
+      path: path.resolve(__dirname, '../static/dll', '[name].dll.manifest.json')
+    })
+  ]
+};
+```
+
+* 修改`webpack.prod.conf.js`
+
+使用`add-asset-html-webpack-plugin`动态添加`dll.js`到`html`。
+
+**需要注意**
+
+1. `add-asset-html-webpack-plugin`要在`HtmlWebpackPlugin`后引入；
+
+2. `html-webpack-plugin`依赖包版本`4.0.0-alpha`会出个问题，添加上去的路径会变成`undefined`需要是**3.2.0**版本
+
+```
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
+...
+plugins: [
+  // 插入dll json
+  new webpack.DllReferencePlugin({
+    context: path.join(__dirname),
+    manifest: require('../static/dll/vendor.dll.manifest.json')
+  }),
+  new HtmlWebpackPlugin(),
+  // 插入 dll js
+  new AddAssetHtmlPlugin([{ 
+    publicPath: config.build.assetsPublicPath + 'static/dll/',  // 注入到html中的路径
+    outputPath: 'static/dll/', // 输出文件目录
+    filepath: resolve('static/dll/*.js'), // 文件路径
+    includeSourcemap: false,
+    typeOfAsset: "js"
+  }])
+]
+
+```
+
 ## 总结
 
-项目经过以上优化，打包从**30**分钟，到**2**分钟，整体还有优化空间，可以使用其他`cdn`，`dll`等优化方式。
+项目经过以上优化，打包从**30**分钟，到**2**分钟不到，整体还有优化空间，可以使用其他`cdn`等优化方式。
