@@ -2,10 +2,20 @@
 
 ## nginx
 
+[find命令](https://www.cnblogs.com/hechunhua/p/4860544.html)
+
 ```
 // 查找nginx配置文件
 
 find / -name nginx.conf
+
+// 查找最近24小时修改的当前目录下的.conf文件，并列出详细信息
+
+find . -name '*.conf' -mtime 0 -ls
+
+// 查找最近30分钟修改的当前目录下的.conf文件
+
+find . -name '*.conf' -mmin -30
 
 // 制定nginx配置
 
