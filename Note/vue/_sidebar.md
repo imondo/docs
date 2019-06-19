@@ -8,4 +8,4 @@
 
   * [项目总结之组件通信](Note/vue/props.md)
 
-  * [项目总结之请求方案](Note/vue/http.md)
+  * [项目总结之后台管理项目](Note/vue/http.md)

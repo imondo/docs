@@ -29,22 +29,20 @@
 简单的示例：
 
 ```
-const blob = response;
 const reader = new FileReader();
-reader.readAsDataURL(blob); // 转换为base64，可以直接放入a表情href
 const disposition = decodeURI(xhr.getResponseHeader('Content-Disposition')); // 文件名处理
 const dispositionArray = disposition.split('filename=');
 const name = dispositionArray[dispositionArray.length - 1];
+const blob = window.URL.createObjectURL(res.data);
 reader.onload = function(e) {
-  // 转换完成，创建一个a标签用于下载
-  const a = document.createElement('a');
-  a.download = name;
-  a.href = e.target.result;
-  document.body.appendChild(a);
-  a.click();
-  setTimeout(() => {
-    document.body.removeChild(a);
-  }, 100);
+  const link = document.createElement('a');
+  link.style.display = 'none';
+  link.href = blob;
+  link.setAttribute('download', decodeURI(fileName));
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  window.URL.revokeObjectURL(blob);
 };
 ```
 
