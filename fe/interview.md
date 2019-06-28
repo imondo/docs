@@ -16,6 +16,8 @@
 
 7. 浏览器会将各层的信息发送给GPU，GPU会将各层合成（composite），显示在屏幕上。
 
+构建DOM树 -> 构建CSSOM树 -> 构建Render树 -> 布局layout
+
 
 * 缓存机制
 
