@@ -11,3 +11,5 @@
   * [项目总结之后台管理项目](Note/vue/http.md)
 
   * [项目总结之部署](Note/vue/deploy.md)
+
+  * [项目总结之组件封装](Note/vue/component.md)
