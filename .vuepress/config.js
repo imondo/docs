@@ -2,7 +2,7 @@ const sidebar = require('./config/sidebar');
 const nav = require('./config/nav');
 
 module.exports = {
-  base: '/docs/',
+  base: '/',
   title: 'Mondo',
   description: '记录工作与生活',
   head: [
