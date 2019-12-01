@@ -1,27 +1,20 @@
 {
   "name": "docs",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "deployed.js",
+  "main": "index.js",
+  "author": "Mondo <568197478@qq.com>",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node ./bin/sidebar.js && vuepress dev .",
+    "build": "node ./bin/sidebar.js && vuepress build ."
   },
-  "dependencies": {
-    "child_process": "^1.0.2",
-    "github-webhook-handler": "^0.7.1",
-    "http": "0.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/one-pupil/docs.git"
-  },
-  "keywords": [
-    "docsify"
-  ],
-  "author": "Mondo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/one-pupil/docs/issues"
-  },
-  "homepage": "https://github.com/one-pupil/docs#readme"
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0",
+    "@vuepress/plugin-medium-zoom": "^1.0.0",
+    "ejs": "^2.7.2",
+    "nodemon": "^1.19.4",
+    "tracer": "^1.0.1",
+    "vuepress": "^1.0.0-rc.1"
+  }
 }
