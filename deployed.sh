@@ -1,4 +1,4 @@
- cd /front/docs/
+ cd /front/docs-blog/
 
 git remote add origin https://github.com/one-pupil/docs.git
 

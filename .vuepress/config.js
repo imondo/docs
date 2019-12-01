@@ -2,7 +2,7 @@ const sidebar = require('./config/sidebar');
 const nav = require('./config/nav');
 
 module.exports = {
-  base: '/blog/',
+  base: '/docs/',
   title: 'Mondo',
   description: '记录工作与生活',
   head: [
@@ -12,7 +12,7 @@ module.exports = {
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
   themeConfig: {
-    repo: "one-pupil/blog",
+    repo: "one-pupil/docs",
     navbar: true,
     editLinks: false,
     docsDir: '',
