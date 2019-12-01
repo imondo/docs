@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>【Vue项目总结】基于饿了么组件封装 | Mondo</title>
+    <meta name="description" content="记录工作与生活">
+    <link rel="icon" href="/blog/favicon.ico">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.ed44c9ec.css" as="style"><link rel="preload" href="/blog/assets/js/app.a523690e.js" as="script"><link rel="preload" href="/blog/assets/js/2.33d63b7e.js" as="script"><link rel="preload" href="/blog/assets/js/16.178a4771.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.e42a888a.js"><link rel="prefetch" href="/blog/assets/js/11.6a203dca.js"><link rel="prefetch" href="/blog/assets/js/12.d14e0732.js"><link rel="prefetch" href="/blog/assets/js/13.629e033e.js"><link rel="prefetch" href="/blog/assets/js/14.de194a35.js"><link rel="prefetch" href="/blog/assets/js/15.5bae4fa4.js"><link rel="prefetch" href="/blog/assets/js/17.5f445c67.js"><link rel="prefetch" href="/blog/assets/js/18.2dd5afe9.js"><link rel="prefetch" href="/blog/assets/js/19.a10028d1.js"><link rel="prefetch" href="/blog/assets/js/20.b2118804.js"><link rel="prefetch" href="/blog/assets/js/21.bc7732ed.js"><link rel="prefetch" href="/blog/assets/js/22.07490fd2.js"><link rel="prefetch" href="/blog/assets/js/23.3971f780.js"><link rel="prefetch" href="/blog/assets/js/24.0214706e.js"><link rel="prefetch" href="/blog/assets/js/25.f1a57df9.js"><link rel="prefetch" href="/blog/assets/js/26.6c4883b1.js"><link rel="prefetch" href="/blog/assets/js/27.6aa1ebeb.js"><link rel="prefetch" href="/blog/assets/js/28.7a40301b.js"><link rel="prefetch" href="/blog/assets/js/29.73dd283d.js"><link rel="prefetch" href="/blog/assets/js/3.d30717e7.js"><link rel="prefetch" href="/blog/assets/js/30.95ba392e.js"><link rel="prefetch" href="/blog/assets/js/31.3a700712.js"><link rel="prefetch" href="/blog/assets/js/32.806ed2ca.js"><link rel="prefetch" href="/blog/assets/js/33.43755514.js"><link rel="prefetch" href="/blog/assets/js/34.ae1642bb.js"><link rel="prefetch" href="/blog/assets/js/35.16d845e4.js"><link rel="prefetch" href="/blog/assets/js/36.c8edf1f3.js"><link rel="prefetch" href="/blog/assets/js/37.d77e3461.js"><link rel="prefetch" href="/blog/assets/js/38.481a52f1.js"><link rel="prefetch" href="/blog/assets/js/4.858348d0.js"><link rel="prefetch" href="/blog/assets/js/5.4deb5bf6.js"><link rel="prefetch" href="/blog/assets/js/6.14b017e1.js"><link rel="prefetch" href="/blog/assets/js/7.52633a05.js"><link rel="prefetch" href="/blog/assets/js/8.b0e67d85.js"><link rel="prefetch" href="/blog/assets/js/9.808e03f5.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.ed44c9ec.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Mondo</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docs/VueJS/01.组件通信处理方案.html" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/ReactJS/01.React基础.html" class="nav-link">React</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/TypeScript/01.基础类型与联合类型.html" class="nav-link">TypeScript</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/小程序/01.小程序项目入坑实践.html" class="nav-link">小程序</a></li></ul></div></div><div class="nav-item"><a href="/blog/docs/NodeJS/01.sql语句增减删查.html" class="nav-link">Node</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docs/webpack/01.项目打包优化方案.html" class="nav-link">webpack</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/工程化/01.cmder.html" class="nav-link">工程化</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/工作系列/01.公司面试系列.html" class="nav-link">工作</a></li><li class="dropdown-item"><!----> <a href="/blog/guide/" class="nav-link">文章归档</a></li></ul></div></div> <a href="https://github.com/one-pupil/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docs/VueJS/01.组件通信处理方案.html" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/ReactJS/01.React基础.html" class="nav-link">React</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/TypeScript/01.基础类型与联合类型.html" class="nav-link">TypeScript</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/小程序/01.小程序项目入坑实践.html" class="nav-link">小程序</a></li></ul></div></div><div class="nav-item"><a href="/blog/docs/NodeJS/01.sql语句增减删查.html" class="nav-link">Node</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docs/webpack/01.项目打包优化方案.html" class="nav-link">webpack</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/工程化/01.cmder.html" class="nav-link">工程化</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/工作系列/01.公司面试系列.html" class="nav-link">工作</a></li><li class="dropdown-item"><!----> <a href="/blog/guide/" class="nav-link">文章归档</a></li></ul></div></div> <a href="https://github.com/one-pupil/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/blog/docs/VueJS/01.组件通信处理方案.html" class="sidebar-link">组件通信处理方案</a></li><li><a href="/blog/docs/VueJS/02.基于饿了么组件封装.html" class="active sidebar-link">基于饿了么组件封装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/docs/VueJS/02.基于饿了么组件封装.html#可编辑表格" class="sidebar-link">可编辑表格</a></li><li class="sidebar-sub-header"><a href="/blog/docs/VueJS/02.基于饿了么组件封装.html#增删改的树组件" class="sidebar-link">增删改的树组件</a></li><li class="sidebar-sub-header"><a href="/blog/docs/VueJS/02.基于饿了么组件封装.html#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/blog/docs/VueJS/03.后台管理项目总结.html" class="sidebar-link">后台管理项目总结</a></li><li><a href="/blog/docs/VueJS/04.使用过程小记.html" class="sidebar-link">使用过程小记</a></li><li><a href="/blog/docs/VueJS/05.项目nginx部署.html" class="sidebar-link">项目nginx部署</a></li><li><a href="/blog/docs/VueJS/06.组件编码规范.html" class="sidebar-link">组件编码规范</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="【vue项目总结】基于饿了么组件封装"><a href="#【vue项目总结】基于饿了么组件封装" class="header-anchor">#</a> 【Vue项目总结】基于饿了么组件封装</h1> <p><code>vue</code>项目中，组件是项目的基石，每个页面都是组件来组装起来，我司没有自己的组件库，选用的是<code>ElementUI</code>组件库，在它的基础上再次封装。</p> <h2 id="可编辑表格"><a href="#可编辑表格" class="header-anchor">#</a> 可编辑表格</h2> <p>由于是后台管理项目，各种单据漫天飞，而且单据列表要可编辑，可验证，基于业务所以封装了<a href="https://github.com/one-pupil/vue-template/blob/master/src/components/page-edit-table/index.vue" target="_blank" rel="noopener noreferrer">可编辑表格组件<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>业务需求：</p> <ol><li><p>每列可以编辑</p></li> <li><p>每列输入的值需要被验证</p></li></ol> <p>每列可编辑，则需要每列的字段需要一个可编辑的属性<code>edit</code>来确定是否可以编辑，输入的值可以被验证，需要我们传入验证规则。</p> <h3 id="确认需要传入的props"><a href="#确认需要传入的props" class="header-anchor">#</a> 确认需要传入的<code>props</code></h3> <div class="language- extra-class"><pre class="language-text"><code>props: {
+  // 表格数据
+  tableData: {
+    type: Array,
+    default: () =&gt; []
+  },
+  // 需要验证的列字段
+  columns: {
+    type: Array,
+    default: () =&gt; []
+  },
+  // 是否可编辑
+  defaultEdit: {
+    type: Boolean,
+    default: true
+  },
+  // 验证集合
+  verifyRules: {
+    type: Object,
+    default: () =&gt; {}
+  }
+}
+</code></pre></div><h3 id="表格传入数据后，初始化可编辑状态"><a href="#表格传入数据后，初始化可编辑状态" class="header-anchor">#</a> 表格传入数据后，初始化可编辑状态</h3> <p>阅读<code>el-table</code>源码，可以看到，表格组件拥有自己的<code>store</code>，一些需要通信的状态都是它来维护的，我们也可创建一个自有的<a href="https://github.com/one-pupil/vue-template/blob/master/src/components/page-edit-table/table-store.js" target="_blank" rel="noopener noreferrer">table-store.js<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>来维护编辑状态</p> <div class="language- extra-class"><pre class="language-text"><code>// 初始化数据
+this.store = new TableStore({
+  list: this.tableData,
+  columns: this.columns,
+  defaultEdit: this.defaultEdit
+});
+</code></pre></div><h3 id="可编辑列edit-table-cell"><a href="#可编辑列edit-table-cell" class="header-anchor">#</a> 可编辑列<code>edit-table-cell</code></h3> <p>利用<code>slot</code>插槽来传递编辑状态和验证规则</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;slot v-else :cellState=&quot;cellState&quot; :validateCell=&quot;validateCell&quot;&gt;&lt;/slot&gt;
+...
+computed: {
+  isInput() {
+    return this.slotName === 'input';
+  },
+  rowState() {
+    const states = this.editTable.store.states;
+    const rowState = states.get(this.row);
+    return rowState;
+  },
+  cellState() {
+    const cellState = this.rowState.get(this.prop);
+    return cellState;
+  }
+},
+methods: {
+  // 验证
+  validateCell(cb) {
+    this.editTable
+      .verifyTableCell(this.row, this.prop, this.cellState)
+      .then(errMsg =&gt; {
+        const valid = !errMsg;
+        typeof cb === 'function' &amp;&amp; cb(valid);
+      });
+  }
+}
+</code></pre></div><h3 id="使用组件"><a href="#使用组件" class="header-anchor">#</a> 使用组件</h3> <div class="language- extra-class"><pre class="language-text"><code>// edit-table.vue
+
+&lt;page-edit-table
+  ref=&quot;editTable&quot;
+  v-model=&quot;tableData&quot;
+  :columns=&quot;['categoryName', 'name', 'purchaseDate']&quot;
+  :default-edit=&quot;true&quot;
+  :verify-rules=&quot;verifyRules&quot;
+&gt;
+  &lt;el-table
+    ref=&quot;table&quot;
+    v-loading=&quot;loading&quot;
+    :data=&quot;tableData&quot;
+    tooltip-effect=&quot;dark&quot;
+    highlight-current-row
+    border
+    stripe
+    style=&quot;width: 100%&quot;
+  &gt;
+    &lt;el-table-column align=&quot;center&quot; label=&quot;序号&quot; width=&quot;50&quot;&gt;
+      &lt;template slot-scope=&quot;scope&quot;&gt;{{ scope.$index + 1 }}&lt;/template&gt;
+    &lt;/el-table-column&gt;
+    &lt;el-table-column label=&quot;品目名称&quot; prop=&quot;categoryName&quot; show-overflow-tooltip&gt;
+      &lt;template slot-scope=&quot;{ row }&quot;&gt;
+        &lt;edit-table-cell :row=&quot;row&quot; prop=&quot;categoryName&quot;&gt;
+          &lt;template slot-scope=&quot;{ cellState, validateCell }&quot;&gt;
+            &lt;el-select
+              v-if=&quot;cellState.edit&quot;
+              v-model=&quot;row.categoryName&quot;
+              clearable
+              placeholder=&quot;请选择品目&quot;
+              @change=&quot;validateCell&quot;
+            &gt;
+              &lt;el-option label=&quot;你&quot; value=&quot;1&quot;&gt;&lt;/el-option&gt;
+              &lt;el-option label=&quot;好&quot; value=&quot;2&quot;&gt;&lt;/el-option&gt;
+              &lt;el-option label=&quot;呀&quot; value=&quot;3&quot;&gt;&lt;/el-option&gt;
+            &lt;/el-select&gt;
+            &lt;span v-if=&quot;!cellState.edit&quot;&gt;{{ row.categoryName }}&lt;/span&gt;
+          &lt;/template&gt;
+        &lt;/edit-table-cell&gt;
+      &lt;/template&gt;
+    &lt;/el-table-column&gt;
+....    
+</code></pre></div><p>效果如下</p> <p><img src="https://user-gold-cdn.xitu.io/2019/6/28/16b9d4008d95a734?w=1388&amp;h=888&amp;f=gif&amp;s=538644" alt=""></p> <p>具体代码可查看<a href="https://github.com/one-pupil/vue-template/blob/master/src/components/page-edit-table/index.vue" target="_blank" rel="noopener noreferrer">组件<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="增删改的树组件"><a href="#增删改的树组件" class="header-anchor">#</a> 增删改的树组件</h2> <p><code>el-tree</code>树形组件其实已经支持了<strong>自定义节点内容</strong>，但是我们要在它的基础上改变<strong>节点内容</strong>，这里主要是运用了<code>Vue.set</code>向响应式对象中添加一个属性。</p> <div class="language- extra-class"><pre class="language-text"><code>// 部分代码
+append(node, data) {
+  const { label } = this.configProps;
+  const newChild = {
+    id: id++,
+    [label]: `三级-${id}`,
+    children: [],
+    isEdit: false
+  };
+  if (!data.children) {
+    this.$set(data, 'children', []);
+  }
+  data.children.push(newChild);
+  this.$emit('addNode', node, data);
+},
+edit(node, data) {
+  if (!node.isEdit) {
+    this.$set(node, 'isEdit', true);
+  }
+  this.$nextTick(() =&gt; {
+    this.$refs[`treeInput${node.id}`].focus();
+  });
+  this.$emit('editNode', node, data);
+}
+</code></pre></div><p>效果如下：</p> <p><img src="https://user-gold-cdn.xitu.io/2019/6/28/16b9d46ce6de7ff8?w=1388&amp;h=298&amp;f=gif&amp;s=233274" alt=""></p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>组件是项目的积木条，公用组件的封装成功与否其实是对项目的开发效率有直接影响。具体代码可查看<a href="https://github.com/one-pupil/vue-template" target="_blank" rel="noopener noreferrer">vue-template<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，基于<code>vue-cli3.0</code>搭建的后台模版。</p> <ul><li><a href="/blog/Note/webpack/webpack.html">webpack常规打包优化方案</a></li> <li><a href="/blog/Note/vue/props.html">组件通信处理方案</a></li> <li><a href="/blog/Note/vue/http.html">后台管理项目总结</a></li> <li><a href="/blog/Note/vue/deploy.html">项目部署</a></li></ul> <ul><li>参考
+<a href="https://github.com/ElemeFE/element/blob/dev/packages/table/src/table.vue" target="_blank" rel="noopener noreferrer">ElTable<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <a href="https://github.com/code-farmer-i/el-table-editabled" target="_blank" rel="noopener noreferrer">el-table-editabled<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">12/1/2019, 11:44:51 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/docs/VueJS/01.组件通信处理方案.html" class="prev">组件通信处理方案</a></span> <span class="next"><a href="/blog/docs/VueJS/03.后台管理项目总结.html">后台管理项目总结</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.a523690e.js" defer></script><script src="/blog/assets/js/2.33d63b7e.js" defer></script><script src="/blog/assets/js/16.178a4771.js" defer></script>
+  </body>
+</html>

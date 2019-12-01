@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>gulp 前端自动化构建工具 | Mondo</title>
+    <meta name="description" content="记录工作与生活">
+    <link rel="icon" href="/blog/favicon.ico">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.ed44c9ec.css" as="style"><link rel="preload" href="/blog/assets/js/app.a523690e.js" as="script"><link rel="preload" href="/blog/assets/js/2.33d63b7e.js" as="script"><link rel="preload" href="/blog/assets/js/31.3a700712.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.e42a888a.js"><link rel="prefetch" href="/blog/assets/js/11.6a203dca.js"><link rel="prefetch" href="/blog/assets/js/12.d14e0732.js"><link rel="prefetch" href="/blog/assets/js/13.629e033e.js"><link rel="prefetch" href="/blog/assets/js/14.de194a35.js"><link rel="prefetch" href="/blog/assets/js/15.5bae4fa4.js"><link rel="prefetch" href="/blog/assets/js/16.178a4771.js"><link rel="prefetch" href="/blog/assets/js/17.5f445c67.js"><link rel="prefetch" href="/blog/assets/js/18.2dd5afe9.js"><link rel="prefetch" href="/blog/assets/js/19.a10028d1.js"><link rel="prefetch" href="/blog/assets/js/20.b2118804.js"><link rel="prefetch" href="/blog/assets/js/21.bc7732ed.js"><link rel="prefetch" href="/blog/assets/js/22.07490fd2.js"><link rel="prefetch" href="/blog/assets/js/23.3971f780.js"><link rel="prefetch" href="/blog/assets/js/24.0214706e.js"><link rel="prefetch" href="/blog/assets/js/25.f1a57df9.js"><link rel="prefetch" href="/blog/assets/js/26.6c4883b1.js"><link rel="prefetch" href="/blog/assets/js/27.6aa1ebeb.js"><link rel="prefetch" href="/blog/assets/js/28.7a40301b.js"><link rel="prefetch" href="/blog/assets/js/29.73dd283d.js"><link rel="prefetch" href="/blog/assets/js/3.d30717e7.js"><link rel="prefetch" href="/blog/assets/js/30.95ba392e.js"><link rel="prefetch" href="/blog/assets/js/32.806ed2ca.js"><link rel="prefetch" href="/blog/assets/js/33.43755514.js"><link rel="prefetch" href="/blog/assets/js/34.ae1642bb.js"><link rel="prefetch" href="/blog/assets/js/35.16d845e4.js"><link rel="prefetch" href="/blog/assets/js/36.c8edf1f3.js"><link rel="prefetch" href="/blog/assets/js/37.d77e3461.js"><link rel="prefetch" href="/blog/assets/js/38.481a52f1.js"><link rel="prefetch" href="/blog/assets/js/4.858348d0.js"><link rel="prefetch" href="/blog/assets/js/5.4deb5bf6.js"><link rel="prefetch" href="/blog/assets/js/6.14b017e1.js"><link rel="prefetch" href="/blog/assets/js/7.52633a05.js"><link rel="prefetch" href="/blog/assets/js/8.b0e67d85.js"><link rel="prefetch" href="/blog/assets/js/9.808e03f5.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.ed44c9ec.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Mondo</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docs/VueJS/01.组件通信处理方案.html" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/ReactJS/01.React基础.html" class="nav-link">React</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/TypeScript/01.基础类型与联合类型.html" class="nav-link">TypeScript</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/小程序/01.小程序项目入坑实践.html" class="nav-link">小程序</a></li></ul></div></div><div class="nav-item"><a href="/blog/docs/NodeJS/01.sql语句增减删查.html" class="nav-link">Node</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docs/webpack/01.项目打包优化方案.html" class="nav-link">webpack</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/工程化/01.cmder.html" class="nav-link">工程化</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/工作系列/01.公司面试系列.html" class="nav-link">工作</a></li><li class="dropdown-item"><!----> <a href="/blog/guide/" class="nav-link">文章归档</a></li></ul></div></div> <a href="https://github.com/one-pupil/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docs/VueJS/01.组件通信处理方案.html" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/ReactJS/01.React基础.html" class="nav-link">React</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/TypeScript/01.基础类型与联合类型.html" class="nav-link">TypeScript</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/小程序/01.小程序项目入坑实践.html" class="nav-link">小程序</a></li></ul></div></div><div class="nav-item"><a href="/blog/docs/NodeJS/01.sql语句增减删查.html" class="nav-link">Node</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docs/webpack/01.项目打包优化方案.html" class="nav-link">webpack</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/工程化/01.cmder.html" class="nav-link">工程化</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/工作系列/01.公司面试系列.html" class="nav-link">工作</a></li><li class="dropdown-item"><!----> <a href="/blog/guide/" class="nav-link">文章归档</a></li></ul></div></div> <a href="https://github.com/one-pupil/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/blog/docs/工程化/01.cmder.html" class="sidebar-link">cmder</a></li><li><a href="/blog/docs/工程化/02.git.html" class="sidebar-link">git</a></li><li><a href="/blog/docs/工程化/03.npm.html" class="sidebar-link">npm</a></li><li><a href="/blog/docs/工程化/04.gulp.html" class="active sidebar-link">gulp</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/docs/工程化/04.gulp.html#插件" class="sidebar-link">插件</a></li><li class="sidebar-sub-header"><a href="/blog/docs/工程化/04.gulp.html#运行" class="sidebar-link">运行</a></li><li class="sidebar-sub-header"><a href="/blog/docs/工程化/04.gulp.html#编译es6" class="sidebar-link">编译ES6</a></li><li class="sidebar-sub-header"><a href="/blog/docs/工程化/04.gulp.html#版本号处理" class="sidebar-link">版本号处理</a></li></ul></li><li><a href="/blog/docs/工程化/05.eslintrc.html" class="sidebar-link">eslintrc</a></li><li><a href="/blog/docs/工程化/06.vscode同步.html" class="sidebar-link">vscode同步</a></li><li><a href="/blog/docs/工程化/07.xshell命令.html" class="sidebar-link">xshell命令</a></li><li><a href="/blog/docs/工程化/08.Github项目实现自动化部署.html" class="sidebar-link">Github项目实现自动化部署</a></li><li><a href="/blog/docs/工程化/09.Nuxt项目从开始到部署.html" class="sidebar-link">Nuxt项目从开始到部署</a></li><li><a href="/blog/docs/工程化/10.vuepress与travis-cli持续集成自动化部署.html" class="sidebar-link">vuepress与travis-cli持续集成自动化部署</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="gulp-前端自动化构建工具"><a href="#gulp-前端自动化构建工具" class="header-anchor">#</a> gulp 前端自动化构建工具</h1> <h2 id="插件"><a href="#插件" class="header-anchor">#</a> 插件</h2> <ul><li>gulp-babel ES6转换成ES5兼容</li> <li>gulp-load-plugins 自动加载<code>package.json</code>中的 <code>gulp</code>插件</li> <li>gulp-plumber 一个专门为gulp而生的错误处理库。</li> <li>gulp-htmlmin 看到名字就能知道，这个插件是用来压缩 HTML。PS：注释啥的都可以去掉哦，看文档get更多技能哈</li> <li>gulp-imagemin 除了能压缩常见的图片格式，还能压缩 SVG，叼叼的~</li> <li>gulp-clean-css 压缩 CSS。我原本推荐的是 gulp-minify-css，结果其首页中已建议改用gulp-clean-css...</li> <li>gulp-uglify 专业压缩 Javascript</li> <li>gulp-concat 上面几个都是压缩，这插件是管合并的...恭喜，“减少网络请求”的成就达成:)</li> <li>gulp-autoprefixer 给 CSS 增加前缀。解决某些CSS属性不是标准属性，有各种浏览器前缀的情况，灰常有用</li> <li>gulp-rename 修改文件名称。比如有时我们需要把app.js改成app.min.js，瞬间高级了</li> <li>gulp-util 最基础的工具，但俺只用来打日志...</li> <li>run-sequence 任务按自己顺序执行</li> <li>del / gulp-clean 删除。俺的使用场景是：JS/CSS 文件都会在压缩后使用gulp-rev，即文件名被hash，然后再上传到 CDN，最后使用 <code>删除插件</code> 把本地压缩后的文件删除。</li> <li>gulp-rev 把静态文件名改成hash的形式。</li> <li>gulp-rev-replace 配合 gulp-rev 使用，拿到生成的 <code>manifest.json</code> 后替换对应的文件名称。</li> <li>gulp-rev-collector 到线上环境前，我会用来配合gulp-rev使用，替换 HTML 中的路径</li> <li>gulp-connect / gulp-livereload LiveReload 的俩款插件都值得拥有，不过都各稍有学习成本，看看文档就明白鸟</li> <li>gulp-sass / gulp-less</li></ul> <h2 id="运行"><a href="#运行" class="header-anchor">#</a> 运行</h2> <p>先建立 <code>package.json</code>，在项目根目录下建立 <code>gulpfile.js</code>文件</p> <div class="language- extra-class"><pre class="language-text"><code>const gulp = require('gulp');
+
+gulp.task('dev', () =&gt; {
+  // 任务处理逻辑
+});
+
+gulp.task('default', ['dev']);
+
+</code></pre></div><h2 id="编译es6"><a href="#编译es6" class="header-anchor">#</a> 编译ES6</h2> <ul><li>安装babel</li></ul> <div class="language- extra-class"><pre class="language-text"><code>npm install babel-core@7.0.0 gulp-babel babel-preset-es2015 --save-dev
+</code></pre></div><ul><li>配置</li></ul> <div class="language- extra-class"><pre class="language-text"><code>const gulp = require('gulp');
+const $ = require('gulp-load-plugins')();  
+
+/* es6 */  
+gulp.task('es6', function() {    
+  return gulp.src('src/**/*.js')  
+    .pipe($.plumber())
+    .pipe($.babel({  
+      presets: ['es2015']  
+    }))  
+    .pipe(gulp.dest('dist/'));  
+}); 
+
+</code></pre></div><h2 id="版本号处理"><a href="#版本号处理" class="header-anchor">#</a> 版本号处理</h2> <p>由于浏览器缓存原因，每次部署可能对于用户来说，程序上线后并没有实时看到程序当前版本响应。</p> <p>实现方式有两种，第一种，利用<code>gulp-rev</code>和<code>gulp-rev-collector</code>:</p> <div class="language- extra-class"><pre class="language-text"><code>const gulp = require('gulp);
+const rev = require('gulp-rev');
+const revCollector = require('gulp-rev-collector');
+const runSequence = require('run-sequence');
+const $ = require('gulp-load-plugins')();
+
+gulp.task('build', () =&gt; {
+  return gulp.src('dist/src/js', {base: 'js'})
+    .pipe($.plumber())
+    .pipe($.babel({
+      presets: ['es2015']
+    }))
+    .pipe(gulp.dest('dist'));
+})
+
+gulp.task('revJs', () =&gt; {
+  return gulp.src('dist/js/pack/**/**/*.js')
+    .pipe(rev())
+    .pipe(gulp.dest('dist/js'))
+    .pipe(rev.manifest())
+    .pipe($.rename('js-manifest.json'))
+    .pipe(gulp.dest('dist/rev'));
+})
+
+gulp.task('rev', function () {
+  log('替换开始');
+  return gulp.src([output + '/*.json', distPath + '/**/**/*.html'])
+  .pipe(revCollector({
+      replaceReved: true
+  }))
+  .pipe(gulp.dest(distPath));
+});
+
+gulp.task('clean:pack', (cb) =&gt; {
+  log('clean pack')
+  del([
+    output + '/css/pack',
+    output + '/js/pack',
+    output + '/rev'
+  ], cb);
+})
+
+gulp.task('pack', () =&gt; {
+  // 先清理，再进行生成
+  del(distFolder + '/**/*', {force: true}).then(() =&gt; {
+    log('已清理发布文件夹：' + distFolder);
+
+    // 执行生成
+    runSequence('build', ['revJs'], 'rev', 'clean:pack',function() {
+      log('任务完成');
+    });
+  });
+});
+
+</code></pre></div><p>第二种，利用<code>gulp-rev</code>，<code>gulp-replace</code>，<code>gulp-rev-replace</code>，<code>gulp-rev-format</code>插件来替换。</p> <div class="language- extra-class"><pre class="language-text"><code>const gulp = require('gulp);
+const $ = require('gulp-load-plugins')();
+
+gulp.task('build', () =&gt; {
+  return gulp.src('dist/src/js', {base: 'js'})
+    .pipe($.plumber())
+    .pipe($.babel({
+      presets: ['es2015']
+    }))
+    .pipe(gulp.dest('dist'));
+})
+
+gulp.task('revJs', () =&gt; {
+  return gulp.src('dist/js/**/**/*.js')
+    .pipe(rev())
+    .pipe(revFormat({
+      prefix: '.', // 在版本号前增加字符
+      suffix: '.cache', // 在版本号后增加字符
+      lastExt: false
+    }))
+    .pipe(rev.manifest())
+    .pipe($.rename('js-manifest.json'))
+    .pipe(gulp.dest('dist/rev'));
+})
+
+function compRev(output) {  
+  log('替换开始');
+  var manifest = gulp.src([output + &quot;/rev/*.json&quot;]);
+  var nowDate = new Date().getTime();
+  function modifyUnreved(filename) {
+    return filename;
+  }
+  function modifyReved(filename) {    
+    if (filename.indexOf('.cache') &gt; -1) {
+      const _version = filename.match(/\.[\w]*\.cache/)[0].replace(/(\.|cache)*/g,&quot;&quot;);
+      const _filename = filename.replace(/\.[\w]*\.cache/,&quot;&quot;);
+      filename = _filename + &quot;?v=&quot; + nowDate + '-' + _version;
+      return filename;
+    }
+    return filename;
+  }
+  return gulp.src([output + '/**/**.html']) 
+    .pipe($.replace(/(\.[a-z]+)\?(v=)?[^\'\&quot;\&amp;]*/g,&quot;$1&quot;)) 
+    .pipe($.revReplace({
+      manifest: manifest,
+      modifyUnreved: modifyUnreved,
+      modifyReved: modifyReved
+    }))  
+    .pipe(gulp.dest(output));
+}
+
+gulp.task('rev', function () {
+  return compRev('dist');
+});
+
+gulp.task('clean:pack', (cb) =&gt; {
+  log('clean pack')
+  del([
+    output + '/css/pack',
+    output + '/js/pack',
+    output + '/rev'
+  ], cb);
+})
+
+gulp.task('pack', () =&gt; {
+  // 先清理，再进行生成
+  del(distFolder + '/**/*', {force: true}).then(() =&gt; {
+    log('已清理发布文件夹：' + distFolder);
+
+    // 执行生成
+    runSequence('build', ['revJs'], 'rev', 'clean:pack',function() {
+      log('任务完成');
+    });
+  });
+});
+
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">12/1/2019, 11:44:51 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/docs/工程化/03.npm.html" class="prev">npm</a></span> <span class="next"><a href="/blog/docs/工程化/05.eslintrc.html">eslintrc</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.a523690e.js" defer></script><script src="/blog/assets/js/2.33d63b7e.js" defer></script><script src="/blog/assets/js/31.3a700712.js" defer></script>
+  </body>
+</html>
