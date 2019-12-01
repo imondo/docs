@@ -1,5 +1,5 @@
- cd /front/docs-blog/
+ cd /front/
 
-git remote add origin https://github.com/one-pupil/docs.git
+ rm -rf docs
 
-git fetch origin gh-pages
+ git clone -b gh-pages https://github.com/one-pupil/docs.git
