@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>利用js-xlsx前端导出Excel | Mondo</title>
+    <meta name="description" content="记录工作与生活">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.11318d85.css" as="style"><link rel="preload" href="/assets/js/app.b0da48c7.js" as="script"><link rel="preload" href="/assets/js/2.33d63b7e.js" as="script"><link rel="preload" href="/assets/js/12.f4a0e77b.js" as="script"><link rel="prefetch" href="/assets/js/10.e42a888a.js"><link rel="prefetch" href="/assets/js/11.7f370fbe.js"><link rel="prefetch" href="/assets/js/13.4e88f527.js"><link rel="prefetch" href="/assets/js/14.9ac2c09c.js"><link rel="prefetch" href="/assets/js/15.a6cfb216.js"><link rel="prefetch" href="/assets/js/16.61fcd2c9.js"><link rel="prefetch" href="/assets/js/17.51725cb6.js"><link rel="prefetch" href="/assets/js/18.d899d5be.js"><link rel="prefetch" href="/assets/js/19.d6768618.js"><link rel="prefetch" href="/assets/js/20.15480d08.js"><link rel="prefetch" href="/assets/js/21.5ca06380.js"><link rel="prefetch" href="/assets/js/22.efcc85e8.js"><link rel="prefetch" href="/assets/js/23.61543423.js"><link rel="prefetch" href="/assets/js/24.b2c21e3a.js"><link rel="prefetch" href="/assets/js/25.7dc45f52.js"><link rel="prefetch" href="/assets/js/26.465008ef.js"><link rel="prefetch" href="/assets/js/27.aaa28f61.js"><link rel="prefetch" href="/assets/js/28.b6a884c2.js"><link rel="prefetch" href="/assets/js/29.61b1e187.js"><link rel="prefetch" href="/assets/js/3.d30717e7.js"><link rel="prefetch" href="/assets/js/30.df1c0e6f.js"><link rel="prefetch" href="/assets/js/31.082a26be.js"><link rel="prefetch" href="/assets/js/32.e4ed0d84.js"><link rel="prefetch" href="/assets/js/33.97962ae8.js"><link rel="prefetch" href="/assets/js/34.67db0902.js"><link rel="prefetch" href="/assets/js/35.df683bf3.js"><link rel="prefetch" href="/assets/js/36.3150d261.js"><link rel="prefetch" href="/assets/js/37.c4f6baab.js"><link rel="prefetch" href="/assets/js/38.c1dbd0db.js"><link rel="prefetch" href="/assets/js/39.2c7c16d6.js"><link rel="prefetch" href="/assets/js/4.1b9a806d.js"><link rel="prefetch" href="/assets/js/5.4deb5bf6.js"><link rel="prefetch" href="/assets/js/6.652ea8e7.js"><link rel="prefetch" href="/assets/js/7.52633a05.js"><link rel="prefetch" href="/assets/js/8.b0e67d85.js"><link rel="prefetch" href="/assets/js/9.808e03f5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.11318d85.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Mondo</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/VueJS/01.组件通信处理方案.html" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/docs/ReactJS/01.React基础.html" class="nav-link">React</a></li><li class="dropdown-item"><!----> <a href="/docs/TypeScript/01.基础类型与联合类型.html" class="nav-link">TypeScript</a></li><li class="dropdown-item"><!----> <a href="/docs/小程序/01.小程序项目入坑实践.html" class="nav-link">小程序</a></li></ul></div></div><div class="nav-item"><a href="/docs/NodeJS/01.sql语句增减删查.html" class="nav-link">Node</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/webpack/01.项目打包优化方案.html" class="nav-link">webpack</a></li><li class="dropdown-item"><!----> <a href="/docs/Notes/01.公司面试系列.html" class="nav-link">Notes</a></li><li class="dropdown-item"><!----> <a href="/docs/工程化/01.cmder.html" class="nav-link">工程化</a></li></ul></div></div> <a href="https://github.com/one-pupil/docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/VueJS/01.组件通信处理方案.html" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/docs/ReactJS/01.React基础.html" class="nav-link">React</a></li><li class="dropdown-item"><!----> <a href="/docs/TypeScript/01.基础类型与联合类型.html" class="nav-link">TypeScript</a></li><li class="dropdown-item"><!----> <a href="/docs/小程序/01.小程序项目入坑实践.html" class="nav-link">小程序</a></li></ul></div></div><div class="nav-item"><a href="/docs/NodeJS/01.sql语句增减删查.html" class="nav-link">Node</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/webpack/01.项目打包优化方案.html" class="nav-link">webpack</a></li><li class="dropdown-item"><!----> <a href="/docs/Notes/01.公司面试系列.html" class="nav-link">Notes</a></li><li class="dropdown-item"><!----> <a href="/docs/工程化/01.cmder.html" class="nav-link">工程化</a></li></ul></div></div> <a href="https://github.com/one-pupil/docs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/docs/Notes/01.公司面试系列.html" class="sidebar-link">公司面试系列</a></li><li><a href="/docs/Notes/02.利用js-xlsx前端导出Excel.html" class="active sidebar-link">利用js-xlsx前端导出Excel</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/Notes/02.利用js-xlsx前端导出Excel.html#利用数据导出" class="sidebar-link">利用数据导出</a></li><li class="sidebar-sub-header"><a href="/docs/Notes/02.利用js-xlsx前端导出Excel.html#利用dom导出" class="sidebar-link">利用DOM导出</a></li><li class="sidebar-sub-header"><a href="/docs/Notes/02.利用js-xlsx前端导出Excel.html#缺陷" class="sidebar-link">缺陷</a></li></ul></li><li><a href="/docs/Notes/03.前端常见下载处理方案.html" class="sidebar-link">前端常见下载处理方案</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="利用js-xlsx前端导出excel"><a href="#利用js-xlsx前端导出excel" class="header-anchor">#</a> 利用js-xlsx前端导出Excel</h1> <p>由于项目临时加入导出Excel功能，后台童靴没有多余时间来处理，想前端来处理导出。</p> <p>查询了前端导出方法，大部分是利用<code>js-xlsx</code>来做处理，按照<a href="https://github.com/SheetJS/js-xlsx" target="_blank" rel="noopener noreferrer">js-xlsx<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>来导出<code>excel</code>时是没有样式处理的。需要我们来利用该库的专业版本才能设置样式。</p> <p>这里就需要<a href="https://github.com/protobi/js-xlsx/tree/beta" target="_blank" rel="noopener noreferrer">xlsx-style<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>来处理，给我们的<code>excel</code>文件来添加样式。</p> <h2 id="利用数据导出"><a href="#利用数据导出" class="header-anchor">#</a> 利用数据导出</h2> <p>拿到后端数据，先要对数据进行组装才能导出我们想要的文件格式。如果想文件有样式只能利用<code>xlsx-style</code>;</p> <div class="language- extra-class"><pre class="language-text"><code>npm install xlsx-style
+</code></pre></div><p>拷贝下载下来的文件目录<code>dist</code>里的<code>xlsx.core.min.js</code>，引入文件</p> <img src="_img/editor/code.png"> <p>这里借鉴这位<a href="https://www.jianshu.com/p/5cfe0ead22cd" target="_blank" rel="noopener noreferrer">博主<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>主要代码，整理了下，可以实现表头与导出文件名称。</p> <p>具体调用可以<a href="https://imondo.cn/excelj/" target="_blank" rel="noopener noreferrer">查看DEMO<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {Array} header 表格头部
+ * @param {Array} body 表格数据
+ * @param {String} title 表格导出名称
+ * @param {Boolean} hasTitle 是否需要表格标题
+ */
+function ExportsEXCL() {
+  this.downLoad = ({
+    header = [],
+    body = [],
+    title = 'excel',
+    hasTitle = false,
+  }) =&gt; {
+    const styleCell = this.setBorderStyle();
+
+    const _headers = header
+      .map((v, i) =&gt; {
+        let key = Object.keys(v);
+        return Object.assign(
+          {},
+          {
+            v: `${v[key[0]]}&lt;key&gt;${key[0]}`,
+            position: String.fromCharCode(65 + i) + (hasTitle ? 1 : 0)
+          }
+        );
+      })
+      .reduce(
+        (prev, next) =&gt;
+          Object.assign({}, prev, {
+            [next.position]: { v: next.v, s: styleCell }
+          }),
+        {}
+      );
+    const _body = body
+      .map((v, i) =&gt;
+        header.map((k, j) =&gt; {
+          let key = Object.keys(k);
+          return Object.assign(
+            {},
+            {
+              v: v[key[0]],
+              position: String.fromCharCode(65 + j) + (i + (hasTitle ? 2 : 1))
+            }
+          );
+        })
+      )
+      .reduce((prev, next) =&gt; prev.concat(next))
+      .reduce(
+        (prev, next) =&gt;
+          Object.assign({}, prev, {
+            [next.position]: { v: next.v, s: styleCell }
+          }),
+        {}
+      );
+
+    const mergeThead = this.setMergeThead(_headers, hasTitle, title);
+
+    const _merges = this.setTableMerges(header, _headers, hasTitle);
+
+    const _thead = this.setTableThead(mergeThead);
+
+    const output = Object.assign({}, _thead, _body);
+
+    const outputPos = Object.keys(output).sort();
+
+    const ref = outputPos[0] + ':' + outputPos[outputPos.length - 1];
+
+    const wb = {
+      SheetNames: ['mySheet'],
+      Sheets: {
+        mySheet: Object.assign({}, output, { '!ref': ref, '!merges': _merges })
+      }
+    };
+
+    this.save(wb, `${title}.xlsx`);
+  };
+
+  this.setTableThead = wb =&gt; {
+    for (let key in wb) {
+      let i = wb[key].v.indexOf('&lt;key&gt;');
+      if (wb[key].v.includes('&lt;key&gt;')) {
+        wb[key].v = wb[key].v.substr(0, i);
+      }
+    }
+    return wb;
+  };
+
+  // 设置合并表头
+  this.setTableMerges = (header, wb, hasTitle) =&gt; {
+    let _merges = [];
+    let len = header.length - 1;
+    if (hasTitle) {
+      let o = {
+        s: {
+          c: 0,
+          r: 0
+        },
+        e: {
+          c: len,
+          r: 0
+        }
+      };
+      _merges.push(o);
+    }
+    return [..._merges];
+  };
+
+  // 设置表头
+  this.setMergeThead = (wb, merge, hasTitle, title) =&gt; {
+    const borderAll = {
+      top: {
+        style: 'thin'
+      },
+      bottom: {
+        style: 'thin'
+      },
+      left: {
+        style: 'thin'
+      },
+      right: {
+        style: 'thin'
+      }
+    };
+    if (hasTitle) {
+      wb['A1'] = {
+        v: `${title}`,
+        s: {
+          border: borderAll,
+          font: {
+            sz: 18,
+            bold: true
+          },
+          alignment: {
+            horizontal: 'center'
+          }
+        }
+      };
+    }
+    return wb;
+  };
+
+  this.setBorderStyle = () =&gt; {
+    const borderAll = {
+      top: {
+        style: 'thin'
+      },
+      bottom: {
+        style: 'thin'
+      },
+      left: {
+        style: 'thin'
+      },
+      right: {
+        style: 'thin'
+      }
+    };
+    return { border: borderAll };
+  };
+
+  this.save = (wb, fileName) =&gt; {
+    let wopts = {
+      bookType: 'xlsx',
+      bookSST: false,
+      type: 'binary'
+    };
+    let xw = XLSX.write(wb, wopts);
+    let obj = new Blob([this.s2ab(xw)], {
+      type: ''
+    });
+    let elem = document.createElement('a');
+    elem.download = fileName || '下载';
+    elem.href = URL.createObjectURL(obj);
+    elem.click();
+    setTimeout(function() {
+      URL.revokeObjectURL(obj);
+    }, 100);
+  };
+
+  this.s2ab = s =&gt; {
+    if (typeof ArrayBuffer !== 'undefined') {
+      var buf = new ArrayBuffer(s.length);
+      var view = new Uint8Array(buf);
+      for (var i = 0; i != s.length; ++i) view[i] = s.charCodeAt(i) &amp; 0xff;
+      return buf;
+    } else {
+      var buf = new Array(s.length);
+      for (var i = 0; i != s.length; ++i) buf[i] = s.charCodeAt(i) &amp; 0xff;
+      return buf;
+    }
+  };
+
+  // 根据val查询Object key
+  this.findKey = (val, obj) =&gt; {
+    return Object.keys(obj).find(v =&gt; obj[v] === val);
+  };
+}
+</code></pre></div><h2 id="利用dom导出"><a href="#利用dom导出" class="header-anchor">#</a> 利用DOM导出</h2> <p><code>js-xlsx</code>提供了一个直接导出HTML上的DOM表格方法<code>XLSX.utils.table_to_book</code>，但是导出的<code>excel</code>文件时没有任何样式，利用<code>xlsx-style</code>中的<code>xlsx.full.min.js</code>来导出时，没有上面这个方法，后面取了巧。</p> <p>把<code>xlsx-style</code>中的<code>full</code>文件导出来的<code>XLSX</code>改成了<code>STYLEXLSX</code>；</p> <img src="_img/editor/carbon.png"> <p>引用如下：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;script src=&quot;//unpkg.com/xlsx/dist/shim.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;//unpkg.com/blob.js@1.0.1/Blob.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;//unpkg.com/file-saver@1.3.3/FileSaver.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./STYLEXLSX.full.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./xlsx.full.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;./index.js&quot;&gt;&lt;/script&gt;
+</code></pre></div><p>利用<code>js-xlsx</code>来导出表格数据，用<code>STYLEXLSX.write</code>来写入数据。</p> <div class="language- extra-class"><pre class="language-text"><code>STYLEXLSX.write(
+  wb,
+  {
+    bookType: type == undefined ? 'xlsx' : type,
+    bookSST: false,
+    type: 'binary'
+  }
+)
+</code></pre></div><p>具体主要代码：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 
+ * @param {Object} dom table的dom元素
+ * @param {Object} name 导出的表名
+ * @param {Object} type 导出的类型
+ * 
+ */
+function exportExl(dom, name = '导出数据', type) {
+	var wb = XLSX.utils.table_to_book(dom, {sheet: &quot;Sheet JS&quot;});
+	var wopts = {
+    bookType: 'xlsx',
+    bookSST: true,
+    type: 'binary',
+    cellStyles: true
+	};
+
+	setExlStyle(wb['Sheets']['Sheet JS']);
+	
+	let tmpDown = new Blob(
+		[
+			this.s2ab(
+				STYLEXLSX.write(
+					wb,
+					{
+						bookType: type == undefined ? 'xlsx' : type,
+						bookSST: false,
+						type: 'binary'
+					} //这里的数据是用来定义导出的格式类型
+				)
+			)
+		],
+		{
+			type: ''
+		}
+	);
+	saveAs(
+		tmpDown,
+		`${name}` +
+			'.' +
+			(wopts.bookType == 'biff2' ? 'xls' : wopts.bookType)
+	);	
+}
+
+function saveAs(obj, fileName) {
+	let tmpa = document.createElement('a');
+	tmpa.download = fileName || '下载';
+	tmpa.href = URL.createObjectURL(obj);
+	tmpa.click();
+	setTimeout(function() {
+		URL.revokeObjectURL(obj);
+	}, 100);
+}	
+
+
+function s2ab (s){
+	if (typeof ArrayBuffer !== 'undefined') {
+		var buf = new ArrayBuffer(s.length);
+		var view = new Uint8Array(buf);
+		for (var i = 0; i != s.length; ++i) view[i] = s.charCodeAt(i) &amp; 0xff;
+		return buf;
+	} else {
+		var buf = new Array(s.length);
+		for (var i = 0; i != s.length; ++i) buf[i] = s.charCodeAt(i) &amp; 0xff;
+		return buf;
+	}
+};
+
+function setExlStyle (data) {  
+	
+  let borderAll = {  //单元格外侧框线
+    top: {
+      style: 'thin'
+    },
+    bottom: {
+      style: 'thin'
+    },
+    left: {
+      style: 'thin'
+    },
+    right: {
+      style: 'thin'
+    }
+  }; 
+	data['!cols'] = [];
+	for (let key in data) {
+		if (data[key] instanceof Object) {
+			data[key].s = {
+				border: borderAll,
+				alignment: {
+					horizontal: 'center'   //水平居中对其
+				},
+				numFmt: 0
+			}
+			data['!cols'].push({wpx: 170});
+		}
+	}
+	return data;
+}
+</code></pre></div><h2 id="缺陷"><a href="#缺陷" class="header-anchor">#</a> 缺陷</h2> <p>如果用数据来控制我们的导出，发现配置多级表头时会好复杂，所以没取深究了，用DOM来导出，又发现如果<strong>要导出分页表格</strong>时只能导出当前页的数据。</p> <p>而且现在所有的表格都可能不是规范的表格，每个表格结构可能都不相同，只能单独处理。</p> <p>当前所有代码<a href="https://github.com/one-pupil/study/tree/master/excel" target="_blank" rel="noopener noreferrer">查看<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">12/7/2019, 8:25:07 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/Notes/01.公司面试系列.html" class="prev">公司面试系列</a></span> <span class="next"><a href="/docs/Notes/03.前端常见下载处理方案.html">前端常见下载处理方案</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.b0da48c7.js" defer></script><script src="/assets/js/2.33d63b7e.js" defer></script><script src="/assets/js/12.f4a0e77b.js" defer></script>
+  </body>
+</html>
