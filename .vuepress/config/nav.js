@@ -32,17 +32,17 @@ module.exports = [
         link: "/docs/webpack/01.项目打包优化方案"
       },
       {
+        text: "Notes",
+        link: "/docs/Notes/01.公司面试系列"
+      },
+      {
         text: "工程化",
         link: "/docs/工程化/01.cmder"
-      },
-      {
-        text: "工作",
-        link: "/docs/工作系列/01.公司面试系列"
-      },
-      {
-        text: "文章归档",
-        link: "/guide/"
       }
+      // {
+      //   text: "文章归档",
+      //   link: "/guide/"
+      // }
     ]
   }
 ];
