@@ -3,6 +3,10 @@ module.exports = [
     text: "前端",
     items: [
       {
+        text: "JavaScript",
+        link: "/docs/前端知识/01.JavaScript/01.基础数据"
+      },
+      {
         text: "Vue",
         link: "/docs/VueJS/01.组件通信处理方案"
       },
