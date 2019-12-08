@@ -42,11 +42,11 @@ module.exports = [
       {
         text: "工程化",
         link: "/docs/工程化/01.cmder"
+      },
+      {
+        text: "归档",
+        link: "/guide/"
       }
-      // {
-      //   text: "文章归档",
-      //   link: "/guide/"
-      // }
     ]
   }
 ];

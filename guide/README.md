@@ -55,8 +55,9 @@ export default {
 
       return this.posts
         .filter(post => {
-          const { frontmatter } = post;
-          return frontmatter && frontmatter.permalink && frontmatter.title;
+          const { title } = post;
+          
+          return !['Docs', 'Home', '导航'].includes(title);
         })
         .map(post => {
           const execs = re.exec(post.relativePath)
