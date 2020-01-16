@@ -143,16 +143,16 @@ export default {
 .page-guide-btn div {
   display: inline-block;
   color: #fff;
-  background-color: #3eaf7c;
+  background-color: #409eff;
   padding: 0.6rem 1.2rem;
   border-radius: 4px;
   transition: all 0.3s ease;
   box-sizing: border-box;
-  border-bottom: 1px solid #389d70;
+  border-bottom: 1px solid #409eff;
 }
 
 .page-guide-btn div:hover {
-  background-color: #4abf8a;
+  background-color: #2684e5;
   cursor: pointer;
 }
 </style>
