@@ -5,7 +5,7 @@ comment: true
 single: true
 ---
 
-> 最近更新了下面这些文章 👇
+> 更新了这些文章 👇
 
 <ul class="page-guide-ul">
   <li 
@@ -38,7 +38,6 @@ export default {
   },
 
   mounted() {
-    console.log(this.$site)
     this.posts = this.$site.pages
     this.num = this.posts.length
   },
@@ -52,15 +51,16 @@ export default {
   methods: {
     getTopKPosts(num) {
       const re = /.*\/(.*?)\.(html|md)/
-
       return this.posts
         .filter(post => {
           const { title } = post;
-          
           return !['Docs', 'Home', '导航'].includes(title);
         })
         .map(post => {
           const execs = re.exec(post.relativePath)
+          if (execs && execs['1'].includes('2019年总结')) {
+            post.title = '2019我的入坑与填坑之旅'
+          }
           return {
             ...post,
             updateTimestamp: (new Date(post.lastUpdated || post.frontmatter.date)).getTime(),

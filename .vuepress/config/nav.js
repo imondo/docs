@@ -25,14 +25,10 @@ module.exports = [
     ]
   },
   {
-    text: "Node",
-    link: "/docs/NodeJS/01.sql语句增减删查"
-  },
-  {
     text: "其他",
     items: [
       {
-        text: "webpack",
+        text: "Webpack",
         link: "/docs/webpack/01.项目打包优化方案"
       },
       {
@@ -42,11 +38,15 @@ module.exports = [
       {
         text: "工程化",
         link: "/docs/工程化/01.cmder"
-      },
-      {
-        text: "归档",
-        link: "/guide/"
       }
     ]
-  }
+  },
+  {
+    text: "Node",
+    link: "/docs/NodeJS/01.sql语句增减删查"
+  },
+  {
+    text: "归档",
+    link: "/guide/"
+  },
 ];

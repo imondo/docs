@@ -3,9 +3,123 @@
  *
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
+body, html 
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+
+ h1, h2, h3, h4, h5, h6 
+  font-weight: 500;
 
 .home .hero img
-  max-width 450px!important
+  max-width 450px!important;
+
+.home .hero .description
+  color: #000!important;
+
+.home .hero .action-button
+  box-shadow: 0 0 0 -2px #cff09e, 0 0 0 -1px #fe4365;
+  border: none;
+  transition: box-shadow .3s;
+
+.home .hero .action-button:hover
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #409eff;
+    -webkit-transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+    transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+    -webkit-animation: gelatine 0.5s 1;
+    animation: gelatine 0.5s 1;
 
 #main-title
-  display: none
+  display: none;
+
+.theme-default-content code
+  color: #fa541c;
+  background-color: rgba(27,31,35,.05);
+
+.nav-links a:hover, .nav-links a.router-link-active
+  color: #409eff!important; // #409eff
+
+.search-box input
+  border-radius: .15rem!important;
+
+a.sidebar-link
+  line-height: 1.7;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif!important;
+  font-weight: 400!important;
+
+/**
+ * $keyframes \ gelatine 
+ **/
+@keyframes gelatine
+  from, to
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+
+  25%
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+
+  50%
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+
+  75%
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+
+
+  from, to
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+
+
+  25%
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+
+
+  50%
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+
+  75%
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+
+@-webkit-keyframes gelatine
+  from, to
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+
+
+  25%
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+
+
+  50%
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+
+
+  75%
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+
+
+  from, to
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+
+
+  25%
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+
+
+  50%
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+
+
+  75%
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);

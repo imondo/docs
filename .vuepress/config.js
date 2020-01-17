@@ -15,11 +15,15 @@ module.exports = {
     repo: "one-pupil/docs",
     navbar: true,
     editLinks: false,
+    smoothScroll: true,
     docsDir: '',
     editLinkText: '',
     lastUpdated: '更新于',
     nav,
     sidebar
+  },
+  markdown: {
+    lineNumbers: true
   },
   plugins: [
     '@vuepress/plugin-back-to-top',
