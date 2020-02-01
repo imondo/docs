@@ -12,7 +12,7 @@
 
   const webpack = [["01.项目打包优化方案.md","项目打包优化方案"]]
 
-  const 前端知识 = [{"title":"JavaScript","collapsable":false,"children":[["01.JavaScript/01.基础数据.md","基础数据"]]},{"title":"CSS","collapsable":false,"children":[["02.CSS/01.box-sizing，你的宽高度计算对了吗.md","box-sizing，你的宽高度计算对了吗"],["02.CSS/02.预编译.md","预编译"]]}]
+  const 前端知识 = [{"title":"JavaScript","collapsable":false,"children":[["01.JavaScript/01.基础数据.md","基础数据"],["01.JavaScript/02.函数.md","函数"],["01.JavaScript/03.原型链.md","原型链"],["01.JavaScript/04.执行上下文.md","执行上下文"],["01.JavaScript/05.作用域和作用域链.md","作用域和作用域链"],["01.JavaScript/06.闭包.md","闭包"],["01.JavaScript/07.创建对象模式.md","创建对象模式"],["01.JavaScript/08.JavaScript线程机制与事件机制.md","JavaScript线程机制与事件机制"]]},{"title":"CSS","collapsable":false,"children":[["02.CSS/01.box-sizing，你的宽高度计算对了吗.md","box-sizing，你的宽高度计算对了吗"],["02.CSS/02.预编译.md","预编译"]]}]
 
   const 小程序 = [["01.小程序项目入坑实践.md","小程序项目入坑实践"],["02.小程序的初次遇见,使用mpvue搭建模板.md","小程序的初次遇见,使用mpvue搭建模板"]]
 
