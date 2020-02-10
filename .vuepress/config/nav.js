@@ -29,7 +29,7 @@ module.exports = [
     items: [
       {
         text: "Webpack",
-        link: "/docs/webpack/01.项目打包优化方案"
+        link: "/docs/webpack/00.webpack基础"
       },
       {
         text: "Notes",

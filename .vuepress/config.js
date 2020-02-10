@@ -19,6 +19,7 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: '更新于',
+    sidebarDepth: 1,
     nav,
     sidebar
   },
