@@ -12,7 +12,7 @@ module.exports = [
       },
       {
         text: "React",
-        link: "/docs/ReactJS/01.React基础"
+        link: "/docs/ReactJS/00.React入门"
       },
       {
         text: "TypeScript",
