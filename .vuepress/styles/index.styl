@@ -19,9 +19,11 @@ body, html
   box-shadow: 0 0 0 -2px #cff09e, 0 0 0 -1px #fe4365;
   border: none;
   transition: box-shadow .3s;
+  padding: 0.48rem 1.46rem!important;
+  font-size: 1.0rem!important;
 
 .home .hero .action-button:hover
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #409eff;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #5878d8;
     -webkit-transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
     transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
     -webkit-animation: gelatine 0.5s 1;
@@ -34,17 +36,85 @@ body, html
   color: #fa541c;
   background-color: rgba(27,31,35,.05);
 
-.nav-links a:hover, .nav-links a.router-link-active
-  color: #409eff!important; // #409eff
+.navbar
+  border-bottom: inherit;
+  background: #fff;
+  box-shadow: 0 8px 24px -2px rgba(0,0,0,.05);
+
+.sidebar-sub-header a.sidebar-link:before
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: .5rem;
+  margin-top: -2px;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #4569d4;
+  border-radius: 50%;
+  opacity: 0;
+  transition: transform .2s,opacity .2s;
+  transform: scale(0) translateX(-10px);
+
+.sidebar-group .sidebar-sub-header a.sidebar-link:before
+  left: 1.25rem;
+
+.sidebar-sub-header a.active:before
+  opacity: 1;
+  transform: scale(1) translateX(0);
 
 .search-box input
-  border-radius: .15rem!important;
+  width: 200px;
+  height: 32px;
+  padding: 0 38px 0 14px;
+  color: #454d64;
+  font-size: 14px;
+  border: 0;
+  outline: none;
+  transition: all .2s;
+  border-radius: 16px;
+  border: none!important;
+  background: url(/assets/img/search.83621669.svg) #f5f6f7 no-repeat right 14px center/16px!important;
 
 a.sidebar-link
-  line-height: 1.7;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif!important;
-  font-weight: 400!important;
+  position: relative;
+  display: block;
+  padding-right: 24px;
+  color: #454d64;
+  line-height: 2.4;
+  font-weight: 500;
+  text-decoration: none;
+  outline: none;
+  transition: color .3s,background .3s;
 
+.sidebar > .sidebar-links > li > a.sidebar-link
+  font-weight: 500!important;
+
+a.sidebar-link.active
+  font-weight: 500;
+
+div[class*="language-"]
+  background: #f6f7f9;
+
+.theme-default-content pre code, .theme-default-content pre[class*="language-"] code
+  color: #454d64
+
+div[class*="language-"].line-numbers-mode::after
+  border-radius: 0;
+  background-color: #eaecef;
+  border-right: none;
+
+div[class*="language-"].line-numbers-mode .line-numbers-wrapper
+  color: #252525;
+
+
+.token.selector, .token.important, .token.atrule, .token.keyword, .token.builtin
+  color: #d13fd4;
+
+.theme-default-content code
+  color: #d56161;
+  background: #f6f7f9;
+  padding: 2px 5px;
 /**
  * $keyframes \ gelatine 
  **/
