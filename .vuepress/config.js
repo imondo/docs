@@ -9,7 +9,8 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0' }],
   ],
   themeConfig: {
     repo: "one-pupil/docs",
@@ -27,7 +28,8 @@ module.exports = {
     lineNumbers: true
   },
   plugins: [
-    '@vuepress/plugin-back-to-top',
+    // '@vuepress/plugin-back-to-top',
+    require('./plugins/back-to-top'),
     '@vuepress/plugin-medium-zoom'
   ]
 }

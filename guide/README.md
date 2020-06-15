@@ -1,27 +1,32 @@
 ---
+home: true
 title: "导航"
 permalink: "guide"
 comment: true
 single: true
 ---
 
-> 更新了这些文章 👇
+> 更新了这些文章 👇 
 
-<ul class="page-guide-ul">
-  <li 
-    class="page-guide-row"
-    v-for="(post, index) in topPublishPosts"
-    :key="index"
-    href="post"
-  >
-    <a :href="post.path">《{{post.title}}》</a>
-    <span>{{ post.formatDay }}</span>
-  </li>
-</ul>
+<main class="container">
+  <ul class="list">
+    <li 
+      class="list-item"
+      v-for="(post, index) in topPublishPosts"
+      :key="index"
+      href="post"
+    >
+      <a class="list-item-content" :href="post.path">
+        <h2 class="font-bold text-lg md:text-2xl text-gray-900">{{post.title}}</h2>
+        <time class="block mb-4 text-gray-700">{{ post.formatDay }}</time>
+      </a>
+    </li>
+  </ul>
 
-<div @click="loadMore" class="page-guide-btn" v-if="showBtn">
-  <div ref="btn">{{btnInfo}}</div>
-</div>
+  <div @click="loadMore" class="page-guide-btn" v-if="showBtn">
+    <div ref="btn">{{btnInfo}}</div>
+  </div>
+</main>
 
 <script>
 export default {
@@ -98,7 +103,7 @@ export default {
 </script>
 
 <style scoped>
-.page-guide-ul {
+/* .page-guide-ul {
   padding-left: 0;
 }
 
@@ -133,7 +138,7 @@ export default {
 .page-guide-row span {
   color: #aaa;
   padding-left: 20px;
-}
+} */
 
 .page-guide-btn {
   text-align: center;
@@ -143,16 +148,127 @@ export default {
 .page-guide-btn div {
   display: inline-block;
   color: #fff;
-  background-color: #4569d4;
+  background-color: #46bd87;
   padding: 0.6rem 1.2rem;
   border-radius: 4px;
   transition: all 0.3s ease;
   box-sizing: border-box;
-  border-bottom: 1px solid #4569d4;
+  border-bottom: 1px solid #46bd87;
 }
 
 .page-guide-btn div:hover {
-  background-color: #5878d8;
+  background-color: #46bd87;
   cursor: pointer;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  border-bottom: none;
+}
+
+.theme-default-content:not(.custom) a:hover {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin: 1rem auto auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.list {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.list-item {
+  margin-bottom: 1rem;
+}
+
+.list-item:hover {
+  background-color: #f7fafc;
+}
+
+.list-item-content {
+  padding: 1rem;
+  outline: 0;
+  display: block;
+  cursor: pointer;
+  border-radius: .25rem;
+  color: #553c9a;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-gray-700 {
+  color: #4a5568;
+}
+
+
+.text-gray-800 {
+  color: #2d3748;
+}
+
+.text-gray-900 {
+  color: #1a202c;
+}
+
+.block {
+  display: block;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+@media (min-width: 1024px) {
+  .container {
+      max-width:48rem
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:h-16 {
+      height:4rem
+  }
+
+  .md\:mt-24 {
+      margin-top: 6rem
+  }
+
+  .md\:py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem
+  }
+
+  .md\:px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem
+  }
+
+  .md\:text-lg {
+      font-size: 1.125rem
+  }
+
+  .md\:text-2xl {
+      font-size: 1.5rem
+  }
+
+  .md\:text-3xl {
+      font-size: 1.875rem
+  }
 }
 </style>

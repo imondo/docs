@@ -23,7 +23,7 @@ body, html
   font-size: 1.0rem!important;
 
 .home .hero .action-button:hover
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #5878d8;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px $accentColor;
     -webkit-transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
     transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
     -webkit-animation: gelatine 0.5s 1;
@@ -50,7 +50,7 @@ body, html
   display: inline-block;
   width: 5px;
   height: 5px;
-  background-color: #4569d4;
+  background-color: $accentColor;
   border-radius: 50%;
   opacity: 0;
   transition: transform .2s,opacity .2s;
@@ -82,16 +82,17 @@ a.sidebar-link
   padding-right: 24px;
   color: #454d64;
   line-height: 2.4;
-  font-weight: 500;
+  font-weight: normal ;
   text-decoration: none;
   outline: none;
   transition: color .3s,background .3s;
 
 .sidebar > .sidebar-links > li > a.sidebar-link
-  font-weight: 500!important;
+  font-weight: normal!important;
 
 a.sidebar-link.active
-  font-weight: 500;
+  font-weight: normal!important;
+  border-left-color: transparent!important;
 
 div[class*="language-"]
   background: #f6f7f9;
@@ -115,6 +116,7 @@ div[class*="language-"].line-numbers-mode .line-numbers-wrapper
   color: #d56161;
   background: #f6f7f9;
   padding: 2px 5px;
+
 /**
  * $keyframes \ gelatine 
  **/
