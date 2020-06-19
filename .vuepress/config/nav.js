@@ -49,4 +49,8 @@ module.exports = [
     text: "归档",
     link: "/guide/"
   },
+  {
+    text: "语雀",
+    link: "https://site.imondo.cn/"
+  }
 ];

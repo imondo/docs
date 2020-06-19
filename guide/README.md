@@ -1,5 +1,4 @@
 ---
-home: true
 title: "导航"
 permalink: "guide"
 comment: true

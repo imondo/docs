@@ -1,0 +1,26 @@
+name: docs action
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Install Dependencies
+      run: yarn
+    
+    - name: Build
+      run: yarn build
+
+    - name: deploy file to server
+      uses: wlixcc/SFTP-Deploy-Action@v1.0
+      with:  
+        username: 'root'   #ssh user name
+        server: '${{ secrets.SERVER_IP }}' #引用之前创建好的 secret
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} #引用之前创建好的 secret
+        local_path: '.vuepress/dist*'  # 打包后文件夹
+        remote_path: '/front/docs'
