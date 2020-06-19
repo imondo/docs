@@ -20,7 +20,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.ACCESS_TOKEN }}
-        publish_dir: ./dist
+        publish_dir: .vuepress/dist
 
     - name: Deploy file to Server
       uses: wlixcc/SFTP-Deploy-Action@v1.0
