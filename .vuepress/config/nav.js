@@ -50,7 +50,7 @@ module.exports = [
     link: "/guide/"
   },
   {
-    text: "语雀",
+    text: "site",
     link: "https://site.imondo.cn/"
   }
 ];

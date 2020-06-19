@@ -16,7 +16,10 @@ jobs:
     - name: Build
       run: yarn build
 
-    - name: deploy file to server
+    - name: Deploy
+      run: yarn docs:deploy      
+
+    - name: Deploy file to Server
       uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:  
         username: 'root'   #ssh user name
