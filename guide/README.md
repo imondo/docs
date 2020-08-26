@@ -31,7 +31,7 @@ single: true
 export default {
   data() {
     return {
-      step: 15,
+      step: 70,
       posts: [],
       page: 1,
       num: 0,
@@ -55,7 +55,7 @@ export default {
   methods: {
     getTopKPosts(num) {
       const re = /.*\/(.*?)\.(html|md)/
-      return this.posts
+      const list = this.posts
         .filter(post => {
           const { title } = post;
           return !['Docs', 'Home', '导航'].includes(title);
@@ -74,6 +74,7 @@ export default {
         })
         .sort((a, b) => b.updateTimestamp - a.updateTimestamp)
         .slice(0, num)
+      return list
     },
     
     formatDate(date) {

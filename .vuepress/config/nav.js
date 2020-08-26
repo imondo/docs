@@ -19,7 +19,7 @@ module.exports = [
         link: "/docs/TypeScript/01.基础类型与联合类型"
       },
       {
-        text: "小程序",
+        text: "微信",
         link: "/docs/小程序/01.小程序项目入坑实践"
       }
     ]
