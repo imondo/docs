@@ -41,8 +41,8 @@ export default {
     }
   },
 
-  mounted() {
-    this.posts = this.$site.pages
+  created() {
+    this.posts = this.$site.pages;
     this.num = this.posts.length
   },
 
@@ -74,6 +74,7 @@ export default {
         })
         .sort((a, b) => b.updateTimestamp - a.updateTimestamp)
         .slice(0, num)
+        console.log(list);
       return list
     },
     
