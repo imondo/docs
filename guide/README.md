@@ -42,6 +42,7 @@ export default {
   },
 
   created() {
+    console.log(this.$site);
     this.posts = this.$site.pages;
     this.num = this.posts.length
   },
@@ -56,25 +57,24 @@ export default {
     getTopKPosts(num) {
       const re = /.*\/(.*?)\.(html|md)/
       const list = this.posts
-        .filter(post => {
-          const { title } = post;
-          return !['Docs', 'Home', '导航'].includes(title);
-        })
+        // .filter(post => {
+        //   const { title } = post;
+        //   return !['Docs', 'Home', '导航'].includes(title);
+        // })
         .map(post => {
           const execs = re.exec(post.relativePath)
-          if (execs && execs['1'].includes('2019年总结')) {
-            post.title = '2019我的入坑与填坑之旅'
-          }
+          // if (execs && execs['1'].includes('2019年总结')) {
+          //   post.title = '2019我的入坑与填坑之旅'
+          // }
           return {
             ...post,
-            updateTimestamp: (new Date(post.lastUpdated || post.frontmatter.date)).getTime(),
+            updateTimestamp: post.lastUpdated ? new Date(post.lastUpdated).getTime() : new Date().getTime(),
             filename: execs ? execs['1'] : '',
-            formatDay: this.formatDate(new Date(post.lastUpdated || post.frontmatter.date))
+            formatDay: this.formatDate(post.lastUpdated ? new Date(post.lastUpdated) : new Date())
           }
         })
         .sort((a, b) => b.updateTimestamp - a.updateTimestamp)
         .slice(0, num)
-        console.log(list);
       return list
     },
     
@@ -104,42 +104,6 @@ export default {
 </script>
 
 <style scoped>
-/* .page-guide-ul {
-  padding-left: 0;
-}
-
-.page-guide-row {
-  line-height: 2;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  position: relative;
-}
-
-.page-guide-row::after {
-  content: " ";
-  width: 100%;
-  border-bottom: 1px dashed #aaa;
-  position: absolute;
-  top: 50%;
-  right: 0;
-}
-
-.page-guide-row a, .page-guide-row span {
-  background: white;
-  z-index: 1;
-}
-
-.page-guide-row a {
-  max-width: 50%;
-  padding-right: 20px;
-}
-
-.page-guide-row span {
-  color: #aaa;
-  padding-left: 20px;
-} */
 
 .page-guide-btn {
   text-align: center;
@@ -168,6 +132,8 @@ ul {
 }
 
 h2 {
+  margin: 0;
+  font-size: 1rem;
   border-bottom: none;
 }
 
@@ -188,7 +154,7 @@ h2 {
 }
 
 .list-item {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .list-item:hover {
@@ -200,14 +166,11 @@ h2 {
   outline: 0;
   display: block;
   cursor: pointer;
+  font-size: .75rem;
   border-radius: .25rem;
   color: #553c9a;
   text-decoration: none;
   background-color: transparent;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
 }
 
 .font-bold {
@@ -265,7 +228,7 @@ h2 {
   }
 
   .md\:text-2xl {
-      font-size: 1.5rem
+      font-size: 1rem
   }
 
   .md\:text-3xl {
