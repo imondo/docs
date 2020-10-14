@@ -9,6 +9,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
+      with:
+        persist-credentials: false
+        # Number of commits to fetch. 0 indicates all history.
+        fetch-depth: 0
 
     - name: Install Dependencies
       run: npm install

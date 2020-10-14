@@ -57,15 +57,12 @@ export default {
     getTopKPosts(num) {
       const re = /.*\/(.*?)\.(html|md)/
       const list = this.posts
-        // .filter(post => {
-        //   const { title } = post;
-        //   return !['Docs', 'Home', '导航'].includes(title);
-        // })
+        .filter(post => {
+          const { title } = post;
+          return !['Docs', 'Home', '导航'].includes(title);
+        })
         .map(post => {
           const execs = re.exec(post.relativePath)
-          // if (execs && execs['1'].includes('2019年总结')) {
-          //   post.title = '2019我的入坑与填坑之旅'
-          // }
           return {
             ...post,
             updateTimestamp: post.lastUpdated ? new Date(post.lastUpdated).getTime() : new Date().getTime(),
