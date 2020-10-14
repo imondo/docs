@@ -46,7 +46,6 @@ function main() {
   });
 
   fs.writeFileSync(sidebarPath, ejs.render(template, { variables }));
-  console.log(sidebarPath);
 }
 
 /**
