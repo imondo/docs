@@ -3,6 +3,8 @@ import { version } from '../../package.json'
 import sidebar from './config/sidebar';
 
 export default defineConfig({
+  base: '/docs/',
+  ignoreDeadLinks: true,
   lang: 'en-US',
   title: '前端小册',
   description: '整理记录开发遇到过、实践过的技术。',
@@ -19,33 +21,20 @@ export default defineConfig({
   },
 
   themeConfig: {
-    // nav: nav(),
+    logo: 'static/imgs/logo-prve.png',
 
-    sidebar: {
-      '/guide/': sidebar,
-      // '/config/': sidebarConfig()
-    },
-  }
+    nav: nav(),
+    sidebar,
+    socialLinks: [{ icon: "github", link: "https://github.com/imondo/docs" }],
+  },
+  
 
 })
 
 function nav() {
   return [
-    { text: 'Guide', link: '/guide/what-is-vitepress', activeMatch: '/guide/' },
-    { text: 'Configs', link: '/config/introduction', activeMatch: '/config/' },
-    {
-      text: version,
-      items: [
-        {
-          text: 'Changelog',
-          link: 'https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md'
-        },
-        {
-          text: 'Contributing',
-          link: 'https://github.com/vuejs/vitepress/blob/main/.github/contributing.md'
-        }
-      ]
-    }
+    { text: 'Guide', link: '/', activeMatch: '/guide/' },
+    { text: 'About', link: 'https://imondo.cn' },
   ]
 }
 

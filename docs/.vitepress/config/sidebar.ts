@@ -4,7 +4,7 @@ function sidebarGuide() {
       text: 'CSS系列',
       collapsible: true,
       items: [
-        { text: 'What is VitePress?', link: '/工程化/index' },
+        { text: 'What is VitePress?', link: '/guide/01_CSS探索/00_垂直居中布局' },
         { text: 'Getting Started', link: '/guide/getting-started' },
         { text: 'Configuration', link: '/guide/configuration' },
         { text: 'Deploying', link: '/guide/deploying' }

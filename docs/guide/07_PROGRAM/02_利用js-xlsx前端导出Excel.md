@@ -235,8 +235,6 @@ function ExportsEXCL() {
 
 把`xlsx-style`中的`full`文件导出来的`XLSX`改成了`STYLEXLSX`；
 
-<img src="_img/editor/carbon.png">
-
 
 引用如下：
 

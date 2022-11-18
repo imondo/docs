@@ -1,4 +1,4 @@
-# box-sizing，你的宽高度计算对了吗？
+# box-sizing
 
 我们都知道`CSS`盒模型分为**IE盒模型**和**W3C标准盒模型**，它们的计算方式和一个`CSS`属性有关`box-sizing`。
 

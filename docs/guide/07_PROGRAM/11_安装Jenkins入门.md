@@ -1,10 +1,10 @@
-# Docker安装Jenkins入门
+# 安装Jenkins入门
 
 ## 安装
 
 执行以下命令
 
-```mginx
+```nginx
 # 相关依赖
 $ sudo yum install -y yum-utils \
   device-mapper-persistent-data \

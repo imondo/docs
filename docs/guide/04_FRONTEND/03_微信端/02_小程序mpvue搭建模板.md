@@ -221,7 +221,3 @@ methods: {
 
 现在我们可以愉快的使用其开发了，如果对 `vue`开发比较熟悉的话，完全迁移过来是没有问题的。最后附上[项目demo](https://github.com/one-pupil/wx-mpvue)和[原文地址][2]
 每个人都有第一次，哈哈~这就是我的第一次写文章，不到之处，望指正。
-
-
-  [1]: /img/bVbabYs
-  [2]: https://imondo.cn/blog/article/37
