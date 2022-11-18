@@ -1,29 +1,25 @@
-name: Deploy
+name: Github Pages Deployment
 
 on:
   push:
     branches:
-      - v2
+      - "v2"
 
 jobs:
   deploy:
+    name: deploy GH pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: yarn
-      - run: yarn install
-
-      - name: Build
-        run: yarn docs:build
-
+          node-version: 16.x
+      - name: Install and build
+        run: npm install && npm run docs:build
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: docs/.vitepress/dist
-          # cname: example.com # if wanna deploy to custom domain
+          branch: gh-pages
+          folder: docs/.vitepress/dist          
