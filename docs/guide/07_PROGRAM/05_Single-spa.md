@@ -60,5 +60,5 @@
 
 
 
-> 项目地址： [single-spa-test](https://github.com/one-pupil/single-spa-test) 效果地址：[single-spa-test](https://one-pupil.github.io/single-spa-test/)
+> 项目地址： [single-spa-test](https://github.com/imondo/single-spa-test) 效果地址：[single-spa-test](https://imondo.github.io/single-spa-test/)
 

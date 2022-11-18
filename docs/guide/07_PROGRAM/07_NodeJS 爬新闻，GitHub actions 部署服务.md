@@ -1,6 +1,6 @@
 # NodeJS 爬新闻，GitHub actions 部署服务
 
-由于最近看本地新闻时，总是这个新闻网看到那个新闻网，感觉实在是麻烦，兴起想自己写个小爬虫来爬取一些新闻组合成自己的一个新闻列表。选取 Node 来实现。源码：[news-crawler](https://github.com/one-pupil/news-crawler) 效果：[news.imondo.cn](http://news.imondo.cn)<br />
+由于最近看本地新闻时，总是这个新闻网看到那个新闻网，感觉实在是麻烦，兴起想自己写个小爬虫来爬取一些新闻组合成自己的一个新闻列表。选取 Node 来实现。源码：[news-crawler](https://github.com/imondo/news-crawler) 效果：[news.imondo.cn](http://news.imondo.cn)<br />
 
 <a name="wVVji"></a>
 ## 思路

@@ -1,6 +1,6 @@
 # React 状态管理
 
-> 由于应用需要管理更多的状态，如何让状态更清晰，可预测，是我们在项目中需要考虑的，由此 `React` 引入了 `Redux`。[源码study](https://github.com/one-pupil/study/tree/master/react-demo/react-test)
+> 由于应用需要管理更多的状态，如何让状态更清晰，可预测，是我们在项目中需要考虑的，由此 `React` 引入了 `Redux`。[源码study](https://github.com/imondo/study/tree/master/react-demo/react-test)
 
 
 ## Redux

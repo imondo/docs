@@ -6,7 +6,7 @@ hero:
   text: 
   tagline: 积硅步，至千里.
   image:
-    src: static/imgs/logo-with-shadow.png
+    src: /imgs/logo-with-shadow.png
     alt: logo
   actions:
     - theme: brand

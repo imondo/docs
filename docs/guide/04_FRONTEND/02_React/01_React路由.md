@@ -1,7 +1,7 @@
 # React  路由
 
 
-> 路由的基础用法回顾，[源码study](https://github.com/one-pupil/study/tree/master/react-demo/react-test)
+> 路由的基础用法回顾，[源码study](https://github.com/imondo/study/tree/master/react-demo/react-test)
 
 
 ## 依赖

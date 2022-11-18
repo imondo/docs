@@ -21,7 +21,7 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: 'static/imgs/logo-prve.png',
+    logo: '/imgs/logo-prve.png',
 
     nav: nav(),
     sidebar,

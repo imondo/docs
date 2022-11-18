@@ -62,7 +62,7 @@
 width = padding + border + content
 height = padding + border + content
 ```
-具体[demo](https://codepen.io/one-pupil/pen/VqZdOm)请查看
+具体[demo](https://codepen.io/imondo/pen/VqZdOm)请查看
 
 ### 总结
 

@@ -290,7 +290,7 @@ function clearStore() {
 选中目录打包生成 `.crx` 文件，不过它需要发布到谷歌应用上才能使用
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b332b8d5efa4534ad17daf63be9f1b2~tplv-k3u1fbpfcp-zoom-1.image)
 ## 总结
-插件只是一个简单的使用，里面还有更多的细致的知识点可以帮助插件实现更多的功能。这次又是在自己生活中，发现需求点使用技术来解决。自己后面也使用 `vue` 尝试重新构建了一次，[源码在此](https://github.com/one-pupil/toy_crearad_crx)。
+插件只是一个简单的使用，里面还有更多的细致的知识点可以帮助插件实现更多的功能。这次又是在自己生活中，发现需求点使用技术来解决。自己后面也使用 `vue` 尝试重新构建了一次，[源码在此](https://github.com/imondo/toy_crearad_crx)。
 
 
 **注意：**

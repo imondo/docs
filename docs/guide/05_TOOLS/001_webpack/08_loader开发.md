@@ -81,4 +81,4 @@ Spritesmith.run({ src: sprites }, function handleResult(err, result) {
 
 ## 简单的写入文件内容 loader
 
-[具体源码](https://github.com/one-pupil/study/tree/master/webpack/test-loader)
+[具体源码](https://github.com/imondo/study/tree/master/webpack/test-loader)

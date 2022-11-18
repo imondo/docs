@@ -372,7 +372,7 @@ function setExlStyle (data) {
 而且现在所有的表格都可能不是规范的表格，每个表格结构可能都不相同，只能单独处理。
 
 
-当前所有代码[查看](https://github.com/one-pupil/study/tree/master/excel)
+当前所有代码[查看](https://github.com/imondo/study/tree/master/excel)
 
 
 

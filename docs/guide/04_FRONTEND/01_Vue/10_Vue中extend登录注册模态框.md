@@ -297,4 +297,4 @@ onLogin(type) {
 
 ![12.gif](https://cdn.nlark.com/yuque/0/2020/gif/124135/1609137726495-d6d49966-d8af-4d5a-a9b3-6989ba6fa4d7.gif)
 
-本文[代码地址](https://github.com/one-pupil/study/blob/master/vue-cli3/vue-project-article/src/components/LoginModal/index.js)
+本文[代码地址](https://github.com/imondo/study/blob/master/vue-cli3/vue-project-article/src/components/LoginModal/index.js)

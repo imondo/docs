@@ -1,6 +1,6 @@
 # 从零搭建 React 开发 H5 模板
 
-> 本文相关代码地址：[github](https://github.com/one-pupil/react-board)  效果展示：[react-demo](https://one-pupil.github.io/react-board/)
+> 本文相关代码地址：[github](https://github.com/imondo/react-board)  效果展示：[react-demo](https://imondo.github.io/react-board/)
 
 ## 项目创建
 
@@ -25,7 +25,7 @@ css-loader style-loader url-loader less less-loader --dev
 ## webpack 配置
 
 区分开发环境 `development` 和生产环境 `production` 配置<br />
-<br />分别创建对应的[配置文件](https://github.com/one-pupil/react-board/blob/master/build/webpack.base.js)<br />
+<br />分别创建对应的[配置文件](https://github.com/imondo/react-board/blob/master/build/webpack.base.js)<br />
 <br />**antd-mobile 按需加载**
 
 - 安装插件

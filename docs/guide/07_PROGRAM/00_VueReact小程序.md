@@ -322,8 +322,8 @@ Component({
 
 ## 路由
 
-- vue 路由管理 [Vue Router](https://router.vuejs.org/zh/)，具体用法[参考](https://github.com/one-pupil/vue-template/blob/master/src/router/index.js)
-- React 路由 [react-router](https://reacttraining.com/react-router/web/guides/philosophy)，但是它由衍生出了 react-router-dom 和 react-router-native 两个路由管理库，具体用法[参考](https://github.com/one-pupil/study/blob/master/react-demo/react-test/src/App.js)
+- vue 路由管理 [Vue Router](https://router.vuejs.org/zh/)，具体用法[参考](https://github.com/imondo/vue-template/blob/master/src/router/index.js)
+- React 路由 [react-router](https://reacttraining.com/react-router/web/guides/philosophy)，但是它由衍生出了 react-router-dom 和 react-router-native 两个路由管理库，具体用法[参考](https://github.com/imondo/study/blob/master/react-demo/react-test/src/App.js)
 - 小程序拥有自己的[路由管理](https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.switchTab.html)
 
 ```javascript
@@ -358,7 +358,7 @@ console.log(store.state.num) // 1
 
 React 状态管理
 
-React 中的状态管理工具有 [Redux](https://www.redux.org.cn/)，Mobx 等，这里用 react-redux 来示范；文中代码具体可见 [react-test](https://github.com/one-pupil/study/blob/master/react-demo/react-test/src/store/index.js)
+React 中的状态管理工具有 [Redux](https://www.redux.org.cn/)，Mobx 等，这里用 react-redux 来示范；文中代码具体可见 [react-test](https://github.com/imondo/study/blob/master/react-demo/react-test/src/store/index.js)
 
 - 创建 action
 

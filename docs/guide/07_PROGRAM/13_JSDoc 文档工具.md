@@ -143,7 +143,7 @@ npm install docdash --save-dev
   }
 }
 ```
-模版文件其实就是主题中[自定义模版](https://github.com/one-pupil/js-utils/blob/master/plugins/layout.tmpl)。<br />
+模版文件其实就是主题中[自定义模版](https://github.com/imondo/js-utils/blob/master/plugins/layout.tmpl)。<br />
 
 <a name="XEJza"></a>
 ## 部署

@@ -1,7 +1,7 @@
 # Vue 3 组合式 API
 
 Vue 3.x 完全不同于 Vue 2.x，使用函数式 API 构建程序，更灵活的组合组件逻辑<br />
-<br />具体代码请查看 [地址](https://github.com/one-pupil/study/tree/master/vue_3.x)<br />
+<br />具体代码请查看 [地址](https://github.com/imondo/study/tree/master/vue_3.x)<br />
 
 <a name="65a0ea9a"></a>
 ## 快速创建项目
