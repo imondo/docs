@@ -22,7 +22,6 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/imgs/logo-prve.png',
-
     nav: nav(),
     sidebar,
     socialLinks: [{ icon: "github", link: "https://github.com/imondo/docs" }],
@@ -33,23 +32,16 @@ export default defineConfig({
 
 function nav() {
   return [
-    { text: 'Guide', link: '/', activeMatch: '/guide/' },
-    { text: 'About', link: 'https://imondo.cn' },
+    { text: '首页', link: '/', activeMatch: '/guide/' },
+    { text: '系列', activeMatch: '/series/', items: navItems()},
+    { text: '关于', link: 'https://imondo.cn' },
   ]
 }
 
 
 
-function sidebarConfig() {
+function navItems() {
   return [
-    {
-      text: 'Config',
-      items: [
-        { text: 'Introduction', link: '/config/introduction' },
-        { text: 'App Configs', link: '/config/app-configs' },
-        { text: 'Theme Configs', link: '/config/theme-configs' },
-        { text: 'Frontmatter Configs', link: '/config/frontmatter-configs' }
-      ]
-    }
+    { text: 'SVG 小册', link: '/series/01_SVG小册/01_基础知识', activeMatch: '/01_svg/' },
   ]
 }
