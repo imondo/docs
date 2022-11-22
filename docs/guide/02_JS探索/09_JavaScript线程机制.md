@@ -53,7 +53,7 @@ console.log(b())
 
 看到上面的代码，在调试阶段可以看到执行栈的执行顺序。首先执行全局代码，根据先进后出的原则，后执行的函数 `a` 会先弹出栈。
 
-![](../../static/img/stack.gif)
+![](/imgs/stack.gif)
 
 或者在一些报错信息中，也可以找到执行栈的痕迹
 
@@ -70,7 +70,7 @@ function b() {
 console.log(b())
 ```
 
-![](../../static/img/stack.png)
+![](/imgs/stack.png)
 
 我们可以在上图中看到报错在 `a` 函数，`a` 函数又是在 `b` 函数中调用的。
 

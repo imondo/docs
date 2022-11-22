@@ -34,6 +34,7 @@ function nav() {
   return [
     { text: '首页', link: '/', activeMatch: '/guide/' },
     { text: '系列', activeMatch: '/series/', items: navItems()},
+    { text: '方案', link: '/scheme/01_解决方案/01_前言', activeMatch: '/scheme/'},
     { text: '关于', link: 'https://imondo.cn' },
   ]
 }
@@ -43,5 +44,6 @@ function nav() {
 function navItems() {
   return [
     { text: 'SVG 小册', link: '/series/01_SVG小册/01_基础知识', activeMatch: '/01_svg/' },
+    { text: 'React Native 小册', link: '/series/02_ReactNative/01_错误异常', activeMatch: '/02_React Native/' },
   ]
 }
