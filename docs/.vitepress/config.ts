@@ -22,6 +22,7 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/imgs/logo-prve.png',
+    // outline: 3,
     nav: nav(),
     sidebar,
     socialLinks: [{ icon: "github", link: "https://github.com/imondo/docs" }],
