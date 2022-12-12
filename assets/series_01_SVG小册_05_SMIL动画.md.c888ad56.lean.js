@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.90b3aaf2.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"series/01_SVG小册/05_SMIL动画.md","lastUpdated":1670824057000}'),s={name:"series/01_SVG小册/05_SMIL动画.md"};function r(_,o,c,n,p,d){return a(),t("div")}const f=e(s,[["render",r]]);export{m as __pageData,f as default};

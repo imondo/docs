@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as _}from"./app.90b3aaf2.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"series/01_SVG小册/02_文件导出和优化.md","lastUpdated":1670824057000}'),a={name:"series/01_SVG小册/02_文件导出和优化.md"};function s(r,o,c,n,p,d){return _(),t("div")}const f=e(a,[["render",s]]);export{m as __pageData,f as default};
