@@ -98,14 +98,16 @@ function mapTocToSidebar(root, prefix) {
         items: mapTocToSidebar(file, prefix + filename + "/")
       };
     } else {
-      if (!title.includes('md')) {
-        logger.error(`For ${file}, its type is not supported.`);
-        return;
-      }
-      const [text] = title.split('.')
-      sidebar[order] = {
-        text: text,
-        link: `${prefix}${filename}`
+      if (title) {
+        if (!title.includes('md')) {
+          logger.error(`For ${file}, its type is not supported.`);
+          return;
+        }
+        const [text] = title.split('.')
+        sidebar[order] = {
+          text: text,
+          link: `${prefix}${filename}`
+        }
       }
     }
   });

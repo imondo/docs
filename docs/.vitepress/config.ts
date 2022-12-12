@@ -33,7 +33,7 @@ export default defineConfig({
 
 function nav() {
   return [
-    { text: '首页', link: '/', activeMatch: '/guide/' },
+    { text: '首页', link: '/guide/02_JS探索/01_基础数据', activeMatch: '/guide/' },
     { text: '系列', activeMatch: '/series/', items: navItems()},
     { text: '方案', link: '/scheme/01_解决方案/01_前言', activeMatch: '/scheme/'},
     { text: '关于', link: 'https://imondo.cn' },
