@@ -303,3 +303,9 @@ module.exports = {
 ## 总结
 
 在开发阶段完成后，需要特别注意一些重复的步骤或者是需要手动修改的操作，只要是手动修改，就会增加上线分险，特别是后来者接受项目的时候。**当然也要文档齐全**。
+
+相关源码：[地址](https://github.com/imondo/study/tree/master/uni-app)
+
+> 积硅步，至千里。
+> 
+> 公众号[码不停指](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/855e466bedfd48be83a87be744dfec21~tplv-k3u1fbpfcp-watermark.image)，欢迎关注。
