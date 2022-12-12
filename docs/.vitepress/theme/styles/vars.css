@@ -23,6 +23,14 @@
   background-color: var(--vp-c-bg);
 }
 
+.VPNavBarTitle{
+  height: 65px;
+}
+
+.content {
+  height: 66px;
+}
+
 
 p img {
   margin-top: 2px;
