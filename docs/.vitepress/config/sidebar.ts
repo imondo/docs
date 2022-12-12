@@ -4,7 +4,7 @@
 
   const scheme = [{"text":"解决方案","collapsible":true,"collapsed":true,"items":[{"text":"前言","link":"/scheme/01_解决方案/01_前言.md"},{"text":"前端常见下载处理方案","link":"/scheme/01_解决方案/03_前端常见下载处理方案.md"},{"text":"uni-app 多环境部署方案","link":"/scheme/01_解决方案/04_uni-app 多环境部署方案.md"},{"text":"前端捕获错误日志存储","link":"/scheme/01_解决方案/110_前端捕获错误日志存储.md"}]}]
 
-  const series = [{"text":"SVG小册","collapsible":true,"collapsed":true,"items":[{"text":"基础知识","link":"/series/01_SVG小册/01_基础知识.md"},{"text":"文件导出和优化","link":"/series/01_SVG小册/02_文件导出和优化.md"},{"text":"描边动画","link":"/series/01_SVG小册/03_描边动画.md"},{"text":"蒙版动画","link":"/series/01_SVG小册/04_蒙版动画.md"},{"text":"SMIL动画","link":"/series/01_SVG小册/05_SMIL动画.md"}]},{"text":"ReactNative","collapsible":true,"collapsed":true,"items":[{"text":"错误异常","link":"/series/02_ReactNative/01_错误异常.md"}]}]
+  const series = [{"text":"SVG小册","collapsible":true,"collapsed":true,"items":[{"text":"基础知识","link":"/series/01_SVG小册/01_基础知识.md"},{"text":"文件导出和优化","link":"/series/01_SVG小册/02_文件导出和优化.md"},{"text":"描边动画","link":"/series/01_SVG小册/03_描边动画.md"},{"text":"蒙版动画","link":"/series/01_SVG小册/04_蒙版动画.md"},{"text":"SMIL动画","link":"/series/01_SVG小册/05_SMIL动画.md"}]},{"text":"ReactNative","collapsible":true,"collapsed":true,"items":[{"text":"错误异常","link":"/series/02_ReactNative/01_错误异常.md"}]},{"text":"Swift","collapsible":true,"collapsed":true,"items":[{"text":"基本语法","link":"/series/03_Swift/00_基本语法.md"},{"text":"数据类型与变量","link":"/series/03_Swift/01_数据类型与变量.md"}]}]
 
 
 export default {
