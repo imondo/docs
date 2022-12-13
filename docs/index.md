@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 迈出一小步
-      link: /guide/01_CSS探索/00_垂直居中布局
+      link: /scheme/01_解决方案/01_前言
     - theme: alt
       text: GitHub
       link: https://github.com/imondo/docs
