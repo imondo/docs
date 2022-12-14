@@ -238,7 +238,7 @@ function ExportsEXCL() {
 
 引用如下：
 
-```
+```html
 <script src="//unpkg.com/xlsx/dist/shim.min.js"></script>
 <script src="//unpkg.com/blob.js@1.0.1/Blob.js"></script>
 <script src="//unpkg.com/file-saver@1.3.3/FileSaver.js"></script>
@@ -250,7 +250,7 @@ function ExportsEXCL() {
 
 利用`js-xlsx`来导出表格数据，用`STYLEXLSX.write`来写入数据。
 
-```
+```js
 STYLEXLSX.write(
   wb,
   {
@@ -264,7 +264,7 @@ STYLEXLSX.write(
 
 具体主要代码：
 
-```
+```js
 /**
  * 
  * @param {Object} dom table的dom元素

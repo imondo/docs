@@ -303,6 +303,23 @@ module.exports = {
 
 服务器也要做相应配置，如果发送请求的浏览器支持 `gzip`，就发送给它 `gzip` 文件。 
 
+nginx 配置 Gzip
+
+```bash
+http {
+    gzip  on;
+    gzip_min_length    1k;
+    gzip_buffers        4 8k;
+    gzip_http_version  1.0;
+    gzip_comp_level    8;
+    gzip_proxied        any;
+    gzip_types          application/javascript text/css image/gif;
+    gzip_vary          on;
+    gzip_disable        "MSIE [1-6]\.";
+    #以下的配置省略...
+}
+```
+
 ## 延申
 
 性能优化本质上是减少首屏加载时间，让页面更快的呈现到用户面前。
@@ -315,3 +332,8 @@ module.exports = {
 
 - 服务层
 
+![yh](/imgs/yh.png)
+
+> 积硅步，至千里。
+> 
+> 公众号[码不停指](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/855e466bedfd48be83a87be744dfec21~tplv-k3u1fbpfcp-watermark.image)，欢迎关注。
