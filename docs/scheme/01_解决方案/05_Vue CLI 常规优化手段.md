@@ -4,6 +4,62 @@
 
 使用 [Vue-cli](https://cli.vuejs.org/zh/guide/installation.html) 创建 Vue 项目，到部署阶段一些常规的优化手段汇总。
 
+## 路由懒加载
+
+把不同的路由对应的组件分割成不同的代码块，待路由请求的时候会单独打包路由，让入口文件变小，加载速度增加。
+
+```js
+const routes = [
+    {
+        path: '/home',
+        name: 'Home',
+        component: () => import('@/pages/Home.vue')
+    }
+]
+// 以函数的形式加载路由，这样就可以把各自的路由文件分别打包，只有在解析给定的路由时，才会加载路由组件
+```
+
+## UI 库按需加载
+
+按需引用 UI 库
+
+```bash
+npm i babel-plugin-component -D
+```
+
+根目录 `babel.config.js` 修改
+
+```js
+module.exports = {
+    presets: ['@vue/cli-plugin-babel/preset'],
+    plugins: [
+        [
+            'component',
+            {
+                libraryName: 'element-ui',
+                styleLibraryName: 'theme-chalk',
+            },
+        ],
+    ],
+};
+```
+
+只引入需要组件
+
+```js
+import Vue from 'vue';
+import {
+    Pagination,
+    Input,
+    Button,
+} from 'element-ui';
+
+Vue.use(Pagination);
+Vue.use(Input);
+Vue.use(Button);
+// ...
+```
+
 ## 全局引入 Less Scss
 
 全局引入预处理 Less 或者 Scss 变量
@@ -216,3 +272,46 @@ configureWebpack: config => {
     );
 },
 ```
+
+## 开启 Gzip
+
+安装插件
+
+```bash
+npm i compression-webpack-plugin -D
+```
+
+修改 `vue.config.js` 配置
+
+```js
+const CompressionPlugin = require('compression-webpack-plugin')
+
+module.exports = {
+    configureWebpack: (config) => {
+        if (process.env.NODE_ENV === 'production') {
+            return {
+                plugins: [new CompressionPlugin({
+                    test: /.js$|.html$|.css/, //匹配文件名
+                    threshold: 10240, //对超过10k的数据进行压缩
+                    deleteOriginalAssets: false //是否删除原文件
+                })]
+            }
+        }
+    }    
+}
+```
+
+服务器也要做相应配置，如果发送请求的浏览器支持 `gzip`，就发送给它 `gzip` 文件。 
+
+## 延申
+
+性能优化本质上是减少首屏加载时间，让页面更快的呈现到用户面前。
+
+优化可以从三个方面考虑：
+
+- 代码层
+
+- 网络层
+
+- 服务层
+
