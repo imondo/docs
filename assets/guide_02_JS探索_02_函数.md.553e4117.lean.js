@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,a as l}from"./app.44061fed.js";const C=JSON.parse('{"title":"函数","description":"","frontmatter":{},"headers":[],"relativePath":"guide/02_JS探索/02_函数.md","lastUpdated":1671003865000}'),p={name:"guide/02_JS探索/02_函数.md"},o=l("",14),e=[o];function t(c,r,F,y,i,D){return a(),n("div",null,e)}const d=s(p,[["render",t]]);export{C as __pageData,d as default};
