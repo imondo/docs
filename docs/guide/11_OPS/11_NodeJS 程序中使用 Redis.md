@@ -11,7 +11,7 @@
 - 下载对应的[程序](https://github.com/tporadowski/redis/releases)，解压到本地
 - 进入目录运行命令 `./redis-server.exe redis.windows.conf`
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/124135/1602572103249-a7d19186-1939-40ce-b2a6-e7330bc41561.png#align=left&display=inline&height=421&margin=%5Bobject%20Object%5D&name=image.png&originHeight=421&originWidth=898&size=28790&status=done&style=none&width=898)<br />具体 Redis 的安装可以查看 [菜鸟教程](https://www.runoob.com/redis/redis-install.html)<br />
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b0a8acb5b13b4a24b43b58836eba6a90~tplv-k3u1fbpfcp-zoom-1.image)<br />具体 Redis 的安装可以查看 [菜鸟教程](https://www.runoob.com/redis/redis-install.html)<br />
 
 <a name="ltpUn"></a>
 ## 程序依赖包
@@ -88,7 +88,7 @@ module.exports = async (ctx, next) => {
 
 <a name="AYz9P"></a>
 ## 注意
-由于生产环境是 Linux，启动 Redis 服务时不可能还是这种前端启动模式，故我们需要修改 `redis.conf` 配置， `daemonize yes` 以后端模式启动。<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/124135/1602573414447-bf947eee-cada-4370-afcd-2ec9e19ef236.png#align=left&display=inline&height=174&margin=%5Bobject%20Object%5D&name=image.png&originHeight=174&originWidth=1199&size=243071&status=done&style=none&width=1199)<br />再次执行启动服务
+由于生产环境是 Linux，启动 Redis 服务时不可能还是这种前端启动模式，故我们需要修改 `redis.conf` 配置， `daemonize yes` 以后端模式启动。<br />![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2592ff48d8cb4e94ae26901ee13df72e~tplv-k3u1fbpfcp-zoom-1.image)<br />再次执行启动服务
 ```powershell
 cd /opt/redis
 ./bin/redis-server ./redis.conf
@@ -98,11 +98,11 @@ cd /opt/redis
 ```powershell
 /opt/redis/bin/redis-cli
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/124135/1602573712190-964c6788-0a35-4002-8096-f60c55bba654.png#align=left&display=inline&height=68&margin=%5Bobject%20Object%5D&name=image.png&originHeight=68&originWidth=595&size=6251&status=done&style=none&width=595)<br />
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e3decbccb7f04272b83e4b48bfbdf9ac~tplv-k3u1fbpfcp-zoom-1.image)<br />
 
 <a name="4L2Rs"></a>
 ## 最后
-利用自己掌握的知识来解决生活中碰到的一些问题，感觉还不错，大家可以体验下或者有好的想法，大家一起交流。<br />![扫码_搜索联合传播样式-微信标准绿版.png](https://cdn.nlark.com/yuque/0/2020/png/124135/1602573880195-6e2972cc-9775-4c72-bbcc-a43480aa7f53.png#align=left&display=inline&height=200&margin=%5Bobject%20Object%5D&name=%E6%89%AB%E7%A0%81_%E6%90%9C%E7%B4%A2%E8%81%94%E5%90%88%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E5%BE%AE%E4%BF%A1%E6%A0%87%E5%87%86%E7%BB%BF%E7%89%88.png&originHeight=800&originWidth=2172&size=6950538&status=done&style=none&width=543)<br />
+利用自己掌握的知识来解决生活中碰到的一些问题，感觉还不错，大家可以体验下或者有好的想法，大家一起交流。<br />![扫码_搜索联合传播样式-微信标准绿版.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/76f23f41aa3043b39f33df6f5d738a63~tplv-k3u1fbpfcp-zoom-1.image)<br />
 <br />**参考：**
 
 - [Linux下redis安装和部署](https://www.jianshu.com/p/bc84b2b71c1c)

@@ -171,7 +171,7 @@ chmod 600 -R ~/.ssh
 ```
 <a name="IVghA"></a>
 ### 自动化配置
-找到 GitHub 上仓库设置，新增 Secrets 设置，添加 `SSH_PRIVATE_KEY` 配置，这个就是复制我们在上一步中`mysite`<br />中的私钥内容，可以参考图中添加需要的私密信息<br />![企业微信截图_1593330308842.png](https://cdn.nlark.com/yuque/0/2020/png/124135/1593330769761-bea400cf-151e-4219-945e-99511057eb7b.png#align=left&display=inline&height=698&margin=%5Bobject%20Object%5D&name=%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_1593330308842.png&originHeight=698&originWidth=1637&size=60302&status=done&style=none&width=1637)
+找到 GitHub 上仓库设置，新增 Secrets 设置，添加 `SSH_PRIVATE_KEY` 配置，这个就是复制我们在上一步中`mysite`<br />中的私钥内容，可以参考图中添加需要的私密信息<br />![企业微信截图_1593330308842.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/42c000c85f6048f0af0d24163384d4c9~tplv-k3u1fbpfcp-zoom-1.image)
 <a name="VhbH9"></a>
 ### 配置文件
 GitHub actions 主要是自动读取仓库下 `.github/workflows` 文件夹下的 yml 配置。具体的一些配置含义已写在配置文件中
@@ -206,7 +206,7 @@ jobs:
         port: ${{ secrets.PORT }}
         script: sh /front/news/deploy.sh # 执行脚本命令
 ```
-可以看到 GitHub actions 最大的好处的是利用第三方已经写好的镜像来做部署，我们只需要写下配置就可以运行，有很大的扩展性。<br />把配置文件提交至远程仓库，可以在仓库 Actions 项中看到启动状态<br />![企业微信截图_15933318302537.png](https://cdn.nlark.com/yuque/0/2020/png/124135/1593331900995-3cad0ae4-ef3e-446d-a470-ea5a08203926.png#align=left&display=inline&height=369&margin=%5Bobject%20Object%5D&name=%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_15933318302537.png&originHeight=369&originWidth=1574&size=29221&status=done&style=none&width=1574)
-<a name="Dh44r"></a>
+可以看到 GitHub actions 最大的好处的是利用第三方已经写好的镜像来做部署，我们只需要写下配置就可以运行，有很大的扩展性。<br />把配置文件提交至远程仓库，可以在仓库 Actions 项中看到启动状态<br />![企业微信截图_15933318302537.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eb7437e545214e3ca17098ba14a57498~tplv-k3u1fbpfcp-zoom-1.image)
+
 ## 总结
-这次使用代码来小试牛刀解决自己生活中的一些问题，也尝试了 GitHub actions 简化了一些重复性的部署操作。<br />
+这次使用代码来小试牛刀解决自己生活中的一些问题，也尝试了 GitHub actions 简化了一些重复性的部署操作。

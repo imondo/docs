@@ -1,4 +1,4 @@
-# 安装Jenkins入门
+# 安装 Jenkins
 
 ## 安装
 

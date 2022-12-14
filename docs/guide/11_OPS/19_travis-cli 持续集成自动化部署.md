@@ -1,4 +1,4 @@
-# vuepress与travis-cli持续集成自动化部署
+# travis-cli 持续集成自动化部署
 
 由于前段时间整理了下工作中常用到的命令，想把其做成个文档，以备以后能够方便查阅，想到用`vuepress`来搭建文档。
 
@@ -65,4 +65,6 @@ deploy:
 
 ## 总结
 
-通过这次项目部署学习到了怎么使用`travis`来持续集成`github`项目，学习阮一峰大神的[持续集成服务 Travis CI 教程](http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html)了解来部分`travis`配置；最后推荐下我的这次部署的项目，前端开发工作中遇到的命令：[fe-dev-command](https://github.com/imondo/fe-dev-command)
+通过这次项目部署学习到了怎么使用`travis`来持续集成`github`项目，学习阮一峰大神的[持续集成服务 Travis CI 教程](http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html)了解来部分`travis`配置。
+
+最后推荐下我的这次部署的项目，前端开发工作中遇到的命令：[fe-dev-command](https://github.com/imondo/fe-dev-command)
