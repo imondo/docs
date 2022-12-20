@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as l,a}from"./app.72bf9abe.js";const F=JSON.parse('{"title":"基础数据","description":"","frontmatter":{},"headers":[],"relativePath":"guide/02_JS探索/01_基础数据.md","lastUpdated":1671535994000}'),o={name:"guide/02_JS探索/01_基础数据.md"},p=a("",27),e=[p];function t(c,r,y,i,D,A){return l(),n("div",null,e)}const u=s(o,[["render",t]]);export{F as __pageData,u as default};
