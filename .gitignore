@@ -12,3 +12,4 @@ config.local.js
 basement_dist
 yarn.lock
 package-lock.json
+/docs/.vitepress/cache
