@@ -36,6 +36,7 @@ function nav() {
     { text: '首页', link: '/guide/02_JS探索/01_基础数据', activeMatch: '/guide/' },
     { text: '系列', activeMatch: '/series/', items: navItems()},
     { text: '方案', link: '/scheme/01_解决方案/01_前言', activeMatch: '/scheme/'},
+    { text: '面试', link: '/interview/01_面试记录/01_公司面试系列', activeMatch: '/interview/' },
     { text: '关于', link: 'https://imondo.cn' },
   ]
 }
