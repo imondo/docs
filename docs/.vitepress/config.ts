@@ -46,6 +46,7 @@ function nav() {
 function navItems() {
   return [
     { text: '设计模式', link: '/series/04_DesignMode/00_设计原则', activeMatch: '/04_DesignMode/' },
+    { text: 'Leetcode', link: '/series/06_leetcode/01_两数之和', activeMatch: '/06_leetcode/' },
     { text: 'MySQL 小册', link: '/series/05_MySQL/01_MySQL 基本操作', activeMatch: '/05_MySQL/' },
     { text: 'SVG 小册', link: '/series/01_SVG小册/01_基础知识', activeMatch: '/01_svg/' },
     { text: 'React Native 小册', link: '/series/02_ReactNative/01_错误异常', activeMatch: '/02_React Native/' },
