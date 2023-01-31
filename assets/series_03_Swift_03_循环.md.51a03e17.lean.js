@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,a as l}from"./app.1805c7d6.js";const A=JSON.parse('{"title":"循环","description":"","frontmatter":{},"headers":[],"relativePath":"series/03_Swift/03_循环.md","lastUpdated":1675155362000}'),p={name:"series/03_Swift/03_循环.md"},o=l("",26),e=[o];function t(c,r,C,i,y,D){return a(),n("div",null,e)}const d=s(p,[["render",t]]);export{A as __pageData,d as default};

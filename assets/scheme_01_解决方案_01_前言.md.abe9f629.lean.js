@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as _,a as t}from"./app.a57aac40.js";const u=JSON.parse('{"title":"前言","description":"","frontmatter":{},"headers":[],"relativePath":"scheme/01_解决方案/01_前言.md","lastUpdated":1675070703000}'),p={name:"scheme/01_解决方案/01_前言.md"},r=t("",4),i=[r];function s(c,n,o,l,d,h){return _(),a("div",null,i)}const m=e(p,[["render",s]]);export{u as __pageData,m as default};
