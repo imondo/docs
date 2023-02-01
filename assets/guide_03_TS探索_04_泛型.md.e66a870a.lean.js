@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,a as l}from"./app.1805c7d6.js";const i=JSON.parse('{"title":"泛型","description":"","frontmatter":{},"headers":[],"relativePath":"guide/03_TS探索/04_泛型.md","lastUpdated":1675155362000}'),p={name:"guide/03_TS探索/04_泛型.md"},o=l("",14),e=[o];function t(c,r,y,F,D,C){return a(),n("div",null,e)}const g=s(p,[["render",t]]);export{i as __pageData,g as default};
