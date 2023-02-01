@@ -72,6 +72,8 @@ package.json#private 设置为 true
 
 ## 配置
 
+找到配置文件，文件路径 `/root/.config/verdaccio`
+
 `config.yaml`：[https://verdaccio.org/zh-CN/docs/configuration](https://verdaccio.org/zh-CN/docs/configuration)
 
 ```bash
@@ -82,6 +84,10 @@ url_prefix: /verdaccio/
 # url_prefix: '/my_prefix'
 # // url -> https://somedomain.org/my_prefix/
 ```
+
+## 注意
+
+- 如果账户忘记密码，删除 `/root/.config/verdaccio/htpasswd` 文件中存储的账户，重启服务。
 
 **Linux 上安装 Node.js 推荐使用 nvm**
 
