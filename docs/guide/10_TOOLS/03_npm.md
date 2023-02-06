@@ -1,4 +1,4 @@
-# 如何发布自己模块包到NPM
+# NPM 依赖管理
 
 ## 创建
 
@@ -72,3 +72,29 @@ npm unpublish <package>@<version>
 
 ```
 
+## 修改 node_module 包，却不受重新安装的影响
+
+使用补丁方法
+
+```bash
+yarn add patch-package postinstall-postinstall -D
+```
+
+添加命令
+
+```bash
+ "scripts": {
++  "postinstall": "patch-package"
+ }
+```
+尝试修改 `node_module` 包中的源码；修改后打补丁
+
+```bash
+yarn patch-package package-name
+```
+
+成功后出现补丁目录 `patchs`
+
+![](https://cdn.nlark.com/yuque/0/2021/png/124135/1638495326004-3168e7c9-7f78-43d1-a2df-1dd17ec63b68.png)
+
+文件中的版本号是针对修改包的版本号。**如果包需要更细，需要再次对源码进行修改并重新打补丁。**
