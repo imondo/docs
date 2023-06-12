@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,a as l}from"./app.3f44cf72.js";const F=JSON.parse('{"title":"视图","description":"","frontmatter":{},"headers":[],"relativePath":"series/05_MySQL/12_视图.md","lastUpdated":1676614967000}'),p={name:"series/05_MySQL/12_视图.md"},o=l("",35),e=[o];function C(t,c,r,y,A,D){return a(),n("div",null,e)}const d=s(p,[["render",C]]);export{F as __pageData,d as default};
